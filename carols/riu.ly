@@ -10,10 +10,9 @@ mt=#(define-music-function (parser location offset) (number?) % move lyric text
 
 \header {
 	title = "Ríu Ríu Chíu"
-	composer = "Anon."
-	poet = "16th Century Villancico"
+	composer = "16th Century Villancico (ed. Nancho Alvarez)"
 	enteredby = "Nancho Alvarez"
-	tagline = "ed. Nancho Alvarez (tomasluisdevictoria.org)"
+	tagline = ""
 }
 
 
