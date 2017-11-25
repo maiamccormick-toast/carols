@@ -10,7 +10,6 @@ global = {
   \preamble
   \key g \major
   \time 4/4
-  \autoBeamOff
 }
 
 sopMusic = \relative c'' {
@@ -23,7 +22,7 @@ sopMusic = \relative c'' {
   d4. c8 b2 |
   b4 a b d |
   b4. a8 g2 |
-  
+
   \repeat volta 2 {
     d'2( e8[ d c b] |
     c2 d8[ c b a] |
@@ -32,12 +31,12 @@ sopMusic = \relative c'' {
     g4 a b c |
   }
   \alternative {
-    { b2 a \bar ":|" }
-    { b2( a2) | g1 \bar "|." }
+    { b2 a | }
+    { b2( a2) | g1 | }
   }
 }
 sopWords = \lyricmode {
-  
+
 }
 
 altoMusic = \relative c'' {
@@ -45,19 +44,19 @@ altoMusic = \relative c'' {
   a fis g2 |
   g4 fis g g |
   g fis g2 |
-  
+
   g4 g fis fis |
   g a g2 |
   g4 fis g g |
   g fis g2 |
-  
+
   g4( b8[ a] g2~ |
   g4 a8[ g] fis2~ |
   fis4 g8[ fis] e2 |
   d4.) d8 d2 |
   d4 fis g g |
   g2 fis2 |
-  
+
   g2( fis2) | d1 |
 }
 altoWords = {
@@ -95,17 +94,17 @@ altoWordsIV = \lyricmode {
 tenorMusic = \relative c' {
   d4 d d d |
   c d d2 |
-  d4 c d b |
+  d4 d d d |
   d4. c8 b2 |
-  
+
   d4 d d d |
   c d d2 |
-  d4 c d b |
+  d4 d d d |
   d4. c8 b2 |
-  
+
   b2( e~ |
   e d~ |
-  d c |
+  d c4. b8 |
   a4) g fis2 |
   g4 d' d e |
   d2 d2 |
@@ -120,19 +119,19 @@ bassMusic = \relative c' {
   a d, g2 |
   g4 d g b |
   d d, g2 |
-  
+
   g4 g b b |
   e, fis g2 |
-  g4 d g b,8 c |
+  g4 d e b8 c |
   d4 d g2 |
-  
+
   g2( e4 g |
   a2 d,4 fis |
   g2 c,4 e |
   fis) e d( c) |
   b d g c, |
   d2 d |
-  
+
   d1 | g1 |
 }
 bassWords = \lyricmode {

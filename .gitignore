@@ -13,3 +13,4 @@
 todo
 __pycache__
 test.*
+.DS_Store
