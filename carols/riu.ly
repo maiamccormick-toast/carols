@@ -53,7 +53,7 @@ cantus={
 %25
 	a'4 a' g' a' |
 	f'2 e'4 d' ~ |
-	d' d' cis' cis' |
+	d' d' c' c' |
 	d'2 d'
         \once \override Score.RehearsalMark.break-visibility = #'#(#t #t #f)
         \override Score.RehearsalMark.self-alignment-X=#right
@@ -104,8 +104,8 @@ altus={
 	e'4 e' d' c' |
 %20
 	e' c' d'2 |
-	cis'4 d'2 d'4 |
-	cis' cis' d'2 |
+	c'4 d'2 d'4 |
+	c' c' d'2 |
 	d' r |
 	r e'4 e' |
 %25
