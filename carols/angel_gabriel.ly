@@ -55,7 +55,9 @@ altoWords = \lyricmode {
   The an -- gel Ga -- bri -- el from heav -- en came,
   His wings as drif -- ted snow, his eyes as flame;
   “All hail,” said he, “thou low -- ly maid -- en Ma -- ry,
-  Most high -- ly fa -- vored la -- dy,” Glo -- ri -- a!
+  Most high -- ly fa -- vored la -- dy,”
+\set associatedVoice = "altos"
+  Glo -- ri -- a!
 }
 altoWordsII = \lyricmode {
   \set stanza = #"2. "
@@ -67,6 +69,7 @@ altoWordsII = \lyricmode {
   \unset ignoreMelismata
   told,
   Most high -- ly fa -- vored la -- dy,”
+  \set associatedVoice = "altos"
   Glo -- ri -- a!
 }
 altoWordsIII = \lyricmode {
@@ -79,6 +82,7 @@ altoWordsIII = \lyricmode {
   \unset ignoreMelismata
   Name.”
   Most high -- ly fa -- vored la -- dy,
+  \set associatedVoice = "altos"
   Glo -- ri -- a!
 }
 altoWordsIV = \lyricmode {
@@ -91,6 +95,7 @@ altoWordsIV = \lyricmode {
   \unset ignoreMelismata
   say
   “Most high -- ly fa -- vored la -- dy,”
+  \set associatedVoice = "altos"
   Glo -- ri -- a!
 }
 

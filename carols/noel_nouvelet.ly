@@ -2,62 +2,64 @@
 \include "header.ly"
 \header {
   title = "Noël Nouvelet"
-  poet = "trans. P.S.B."
   composer = "15th Century French Carol"
 }
 
 global = {
   \preamble
-  \key bes \major
+  \key f \major
   \time 2/4
-  \autoBeamOff
 }
 
 sopMusic = \relative c'' {
-  g8 d' e c |
-  d4 bes |
-  c8 c16[ d] bes8 a |
-  g2 | \break
-  
   \slurDotted
   g8( d') e c |
   \slurSolid
   d4 bes |
-  c8 c16[ d] bes8 a |
+  c8 c16( d) bes8 a |
   g2 | \break
-  
+
+  \slurDotted
+  g8( d') e c |
+  \slurSolid
+  d4 bes |
+  c8 c16( d) bes8 a |
+  g2 | \break
+
   bes4 a8 g |
   a4. d,8 |
   bes' bes a g |
   a2 | \break
-  
+
   g8 d' e c |
   d4 bes |
-  c8 c16[ d] bes8 a |
+  c8 c16( d) bes8 a |
   g2 \bar "|."
 }
 sopWords = \lyricmode {
-  
+
 }
 
 altoMusic = \relative c' {
-  g'8 d g g |
+  \slurDotted
+  g'8( d) g g |
+  \slurSolid
   d4 g |
   e8 e g fis |
   d2 |
-  
+
   \slurDotted
   g8( d) g g |
   \slurSolid
   d4 g |
   e8 e g fis |
   d2 |
-  
+
   d4 e8 e |
   d4. d8 |
   d d e e |
   d2 |
-  
+
   g8 d g g |
   d4 g |
   e8 e g fis |
@@ -65,55 +67,62 @@ altoMusic = \relative c' {
 }
 altoWords = \lyricmode {
   \set stanza = "1. "
-  \markup\italic “No -- \markup\italic ël \markup\italic nou -- \markup\italic ve -- \markup\italic let,”
-  come let us sing \markup\italic “no -- \markup\italic ël;”
   \set ignoreMelismata = ##t
-  Let us faith -- ful folk,
+  No -- ël nou -- ve -- let,
   \unset ignoreMelismata
-  cry out our thanks to God!
-  
-  Sing we \markup\italic “no -- \markup\italic ël,”
-  un -- to the ti -- ny King,
-  \markup\italic “No -- \markup\italic ël \markup\italic nou -- \markup\italic ve -- \markup\italic let,”
-  come let us sing \markup\italic “no -- \markup\italic ël.”
+  No -- ël chan -- tons i -- ci,
+  Dé -- vo -- tes gens,
+  cri -- ons à Dieu mer -- ci!
+
+  Chan -- tons No -- ël
+  pour le Roi nou -- ve -- let!
+  No -- ël nou -- ve -- let,
+  No -- ël chan -- tons i -- ci!
 }
+
 altoWordsII = \lyricmode {
   \set stanza = "2. "
-  Prais -- es to our Lord, our Sav -- ior Je -- sus Christ,
+  En Beth -- lé -- em‚
+  Ma -- rie et  Jo -- seph vy‚
   \set ignoreMelismata = ##t
-  Come to earth as man, 
+  l’as -- ne et le boeuf,
   \unset ignoreMelismata
-  as man to live and die,
-  
+  l’en -- fant cou  -- ché au lit
+  La crèche é -- tait
+  au lieu d’un ber -- cel -- et;
 }
+
 altoWordsIII = \lyricmode {
-  \markup\italic No -- \markup\italic ël \markup\italic nou -- \markup\italic ve -- \markup\italic let, \markup\italic No -- \markup\italic ël \markup\italic chan -- \markup\italic tons \markup\italic i -- \markup\italic ci,
-  \markup\italic Dé -- \markup\italic vo -- \markup\italic tes \markup\italic gens, \markup\italic cri -- \markup\italic ons \markup\italic à \markup\italic Dieu \markup\italic mer -- \markup\italic ci!
-  
-  \markup\italic Chan -- \markup\italic tons \markup\italic No -- \markup\italic ël \markup\italic pour \markup\italic le \markup\italic Roi \markup\italic nou -- \markup\italic ve -- \markup\italic let!
-  \markup\italic No -- \markup\italic ël \markup\italic nou -- \markup\italic ve -- \markup\italic let, \markup\italic No -- \markup\italic ël \markup\italic chan -- \markup\italic tons \markup\italic i -- \markup\italic ci!
+  Bien -- tôt les rois,
+  par l'é -- toile é -- clair -- cis,
+  De l'O -- ri -- ent dont
+  ils é -- taient sor -- tis.
+  A Beth -- lé -- em vin -- rent un ma -- ti -- net;
 }
+
 altoWordsIV = \lyricmode {
 }
 
 tenorMusic = \relative c' {
-  g8 bes c c |
-  bes4 d |
-  c8 g d' d |
-  bes2 |
-  
   \slurDotted
   g8( bes) c c |
   \slurSolid
   bes4 d |
   c8 g d' d |
   bes2 |
-  
+
+  \slurDotted
+  g8( bes) c c |
+  \slurSolid
+  bes4 d |
+  c8 g d' d |
+  bes2 |
+
   bes4 c8 c |
-  a[ g fis] d |
+  a g fis d |
   bes' bes c c |
-  fis,([ g] a4) |
-  
+  fis,( g a4) |
+
   g8 bes c c |
   bes4 d |
   c8 g d' c |
@@ -124,23 +133,25 @@ tenorWords = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g8 g c, e |
+  \slurDotted
+  g8( g) c, e |
+  \slurSolid
   g4 g |
   c,8 c d d |
   g2 |
-  
+
   \slurDotted
   g8( g) c,8 e |
   \slurSolid
   g4 g |
   c,8 c d d |
   g2 |
-  
+
   g4 a8 a |
-  fis8[ e d] d8 |
+  fis8 e d d8 |
   g g a a |
-  d,([ e] fis4) |
-  
+  d,( e fis4) |
+
   g8 g c, e |
   g4 g |
   c,8 c d d |
@@ -158,7 +169,6 @@ bassWords = \lyricmode {
       \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
     >>
     \new Lyrics \with { alignAboveContext = #"women" } \lyricsto "sopranos" \sopWords
-    \new Lyrics = "altosIV"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \altoWordsIV
     \new Lyrics = "altosIII"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \altoWordsIII
     \new Lyrics = "altosII"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \altoWordsII
     \new Lyrics = "altos"  \with { alignBelowContext = #"women"  } \lyricsto "sopranos" \altoWords

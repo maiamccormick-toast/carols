@@ -132,7 +132,6 @@ latin = \lyricmode {
 }
 
 \score {
-  \transpose aes g
   \context ChoirStaff <<
     \context ChordNames \accomp
     \unset ChoirStaff.melismaBusyProperties

@@ -83,13 +83,6 @@ altoWordsIII = \lyricmode {
   Come a -- dore on bend -- ed knee
   Christ, the Lord, our new -- born King.
 }
-altoWordsIV = \lyricmode {
-  \set stanza = #"4. "
-  See Him in a man -- ger laid,
-  Whom the choirs of an -- gels praise;
-  Ma -- ry, Jo -- seph, lend your aid,
-  While our hearts in love we raise.
-}
 
 tenorMusic = \relative c' {
   d4 d d d |
@@ -152,7 +145,6 @@ bassWords = \lyricmode {
       \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
     >>
     \new Lyrics \with { alignAboveContext = #"women" } \lyricsto "tenors" \sopWords
-    \new Lyrics = "altosIV"  \with { alignBelowContext = #"women" } \lyricsto "tenors" \altoWordsIV
     \new Lyrics = "altosIII"  \with { alignBelowContext = #"women" } \lyricsto "tenors" \altoWordsIII
     \new Lyrics = "altosII"  \with { alignBelowContext = #"women" } \lyricsto "tenors" \altoWordsII
     \new Lyrics = "altos"  \with { alignBelowContext = #"women" } \lyricsto "tenors" \altoWords

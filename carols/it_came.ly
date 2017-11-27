@@ -152,9 +152,9 @@ stanzaf = \lyricmode {
     \lyricsto "sop" \context Lyrics = "stanza-3" {
       \set stanza = "3."
       \stanzac }
-                                %	\lyricsto "sop" \context Lyrics = "stanza-4" {
-                                %		\set stanza = "4."
-                                %			\stanzad }
+    \lyricsto "sop" \context Lyrics = "stanza-4" {
+      \set stanza = "4."
+        \stanzad }
                                 %	\lyricsto "sop" \context Lyrics = "stanza-5" {
                                 %		\set stanza = "5."
                                 %			\stanzae }

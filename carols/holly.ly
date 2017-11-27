@@ -31,10 +31,11 @@ sopMusic = \relative c'' {
   g g g4 e'4 |
   \slurSolid d( b) g8 g |
   g g g4 e' |
-  d2 \bar""\break d8[ c] |
+  d2 \bar""\break
 
-  b8 a g4 b |
-  e,8 e d4 g8 a |
+  d8( c) |
+  b8 a g g b b |
+  e,4 d4 g8( a) |
   b c b4 a |
   g2 \bar "|."
 
@@ -58,14 +59,15 @@ altoMusic = \relative c' {
 
   e8 |
   d d d4 \slurSolid e8[ fis] |
-  g4( d) d8 d |
-  d d e4 fis |
-  g( fis) e8[ fis] |
+  g2 e8 e |
+  d d e4 g |
+  g( fis)
 
-  g fis g[ fis] e[ d] |
-  c8 c d4 g8 g |
-  g g g4 fis |
-  g2 \bar "|."
+  e8( fis) |
+  g fis g fis e d |
+  c4 d g |
+  g8 g g4 fis |
+  d2 \bar "|."
 }
 altoWords = {
   \lyricmode {
@@ -79,7 +81,6 @@ altoWords = {
     \unset ignoreMelismata
   }
   \lyricmode{
-    %\set associatedVoice = "basses"
     The ris -- ing of the sun __
     And the run -- ning of the deer,
     The play -- ing of the mer -- ry or -- gan,
@@ -131,10 +132,11 @@ tenorMusic = \relative c' {
 
   c8 |
   b c d4 c |
-  \slurSolid b( g) g8 g |
-  g g c4 c |
-  d2 c8[ d] |
+  \slurSolid b( d) b8 b |
+  b b b4 c |
+  d2
 
+  c8( d) |
   d8 d d4 g, |
   g8 a b4 c8 e |
   d e d4 c |
@@ -159,17 +161,28 @@ bassMusic = \relative c' {
 
   g8 |
   g a b4 a4 |
-  \slurSolid g4( g,) b8 b |
-  c e g4 a |
-  b( a) g8[ fis] |
+  g2 e8 e |
+  g g e4 c' |
+  \slurSolid
+  b( a)
 
+  g8( fis) |
   g a b4 g |
   c,8 c g4 e'8 c |
   d d d4 d |
   g2 \bar "|."
 }
 bassWords = \lyricmode {
-
+  \set ignoreMelismata = ##t
+  _
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _
+  _ _
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+  _
+  _ _ _ _ _ _ _ _ _ _ _ _ _
+  \unset ignoreMelismata
+  The play -- ing of the mer -- ry or -- gan,
+  Sweet sing -- ing in the choir.
 }
 
 pianoRH = \relative c' {
