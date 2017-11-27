@@ -55,7 +55,7 @@ altoMusic = \relative c' {
   a4. g8 f4 e |
   d e f c |
   f8 f f f f4. g8 |
-  f4 e f2 \bar "|."
+  f4 e c2 \bar "|."
 }
 altoWords = \lyricmode {
   \set stanza = #"1. "

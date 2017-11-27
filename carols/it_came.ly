@@ -95,7 +95,7 @@ stanzaa = \lyricmode {
 }
 
 stanzab = \lyricmode {
-  Still throuh the clo -- ven skies they come
+  Still through the clo -- ven skies they come
   With peace -- ful wings un -- furl'd;
   And still their heav'n -- ly mu -- sic floats
   O'er all the wea -- ry world;
