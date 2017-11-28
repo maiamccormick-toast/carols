@@ -1,6 +1,6 @@
 \header {
   filename = "SilentNight-Complete.ly"
-  enteredby = "Gordon Gilbert"
+  enteredby = "Gordon Gilbert/Maia McCormick"
   composer = "Franz Gruber, 1818"
   poet = "Rev. Joseph Mohr, 1818"
   date="trans 1863 by Jane Campbell"
@@ -11,8 +11,8 @@
   style = "Hymn"
   mutopiacomposer = \composer
   mutopiapoet=\poet
-  maintainer = "Gordon Gilbert"
-  maintainerEmail = "gord@angel.eicat.ca"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
   lastupdated = "2005/Dec/08"
 }
 
@@ -22,7 +22,7 @@
 
 global= {
   \preamble
-  
+
   \time 6/8
   \key bes \major
 }
@@ -52,7 +52,7 @@ alto=\context Voice = "alto"   {
 tenor = \context Voice = "tenor"   {
   \voiceOne
   bes4 bes8 f4.
-  bes4 bes8 f4. 
+  bes4 bes8 f4.
   a4 a8 c'4. bes4 bes8 bes4.
   bes4 bes8 g8.( a16) bes8 bes8. bes16 bes8 f4.
   bes4 bes8 \slurDashed g8.( a16) \slurSolid bes8 bes8. bes16 bes8 f4.
@@ -71,58 +71,103 @@ bass = \context Voice = "bass"   {
   f,4 f,8 f,8. f,16 f,8 bes,2.
 }
 accomp=\chordmode {
-  
+
 }
 
 
 
 stanzaa = \lyricmode {
-  Si -- lent night! Ho -- ly night!
-  All is calm, all is bright
-  Round yon Vir -- gin Mo -- ther and Child,
-  Ho -- ly \set ignoreMelismata = ##t In -- fant \unset ignoreMelismata so ten -- der and mild.
-  Sleep in hea -- ven -- ly peace,
-  Sleep in hea -- ven -- ly peace.
+  Stil -- _ le Nacht!
+  hei -- li -- ge Nacht!
+  Al -- les schläft;
+  ein -- sam wacht.
+  Nur das
+  \set ignoreMelismata = ##t
+  trau -- te hoch -- hei -- li -- ge Paar.
+  Hol -- der Kna -- be im lock -- i -- gen Haar,
+  \unset ignoreMelismata
+  Schlaf in himm -- li -- scher Ruh! __
+  Schlaf in himm -- li -- scher Ruh! __
 }
 
 stanzab = \lyricmode {
-  Si -- lent night! Ho -- ly night!
-  Shep -- herds quake at the sight, 
-  Glo -- ries stream from hea -- ven a -- far, 
-  Heaven -- ly hosts sing al -- le -- lu -- ia; 
-  Christ, the Sa -- vior, is born,
-  Christ, the Sa -- vior, is born.
-}
+    Stil -- _ le Nacht!
+    hei -- li -- ge Nacht!
+    Hir -- ten erst kund -- ge -- macht,
+    Durch der En -- gel Hal -- le -- lu -- ja!
+    Tönt es laut __ von fern __ und nah:
+    Christ, der Ret -- ter ist da! __
+    Christ, der Ret -- ter ist da! __
+  }
 
 stanzac = \lyricmode {
-  Si -- lent night! Ho -- ly night!
-  Son of God, love's pure light
-  Ra -- diant beams from thy ho -- ly face, 
-  With the \set ignoreMelismata = ##t dawn of \unset ignoreMelismata  re -- dee -- _ ming grace, 
-  Je -- sus, Lord, at thy birth.
-  Jes -- us, Lord, at thy birth.
+  Stil -- _ le Nacht!
+  hei -- li -- ge Nacht!
+  Got -- tes Sohn, o wie lacht
+  Lieb’ aus dein -- em göt -- tlich -- en Mund,
+  Da uns schlägt die
+  \set ignoreMelismata = ##t
+  ret -- ten -- de Stund’.
+  \unset ignoreMelismata
+  Christ, in dein -- er Ge -- burt! __
+  Christ, in dein -- er Ge -- burt! __
 }
 
 stanzad = \lyricmode {
-  
+
 }
 stanzae = \lyricmode {
-  
+
 }
 stanzaf = \lyricmode {
-  
+
+}
+
+verses = \markup{
+  \fill-line {
+    \column{
+      \line { \bold "English - Verse 1:" }
+      \smaller {
+        \line{ Silent night! Holy night!}
+        \line{ All is calm, all is bright,}
+        \line{ Round yon Virgin Mother & Child!}
+        \line{ Holy Infant, so tender and mild,}
+        \line{ Sleep in heavenly peace! (2x) }
+      }
+    }
+    \column{
+      \line { \bold "Verse 2:" }
+      \smaller {
+        \line{ Silent night! Holy night! }
+        \line{ Shepherds quake at the sight! }
+        \line{ Glories stream from Heaven afar, }
+        \line{ Heavenly Hosts sing Alleluia! }
+        \line{ Christ, the Saviour, is born! (2x) }
+      }
+    }
+    \column{
+      \line { \bold "Verse 3:" }
+      \smaller {
+        \line{ Silent night! Holy night! }
+        \line{ Son of God, love’s pure light }
+        \line{\smaller Radiant beams from Thy Holy Face }
+        \line{ With the dawn of redeeming grace, }
+        \line{ Jesus, Lord, at Thy Birth! (2x) }
+      }
+    }
+  }
 }
 
 \score {
   \context ChoirStaff <<
     \context ChordNames \accomp
-    \unset ChoirStaff.melismaBusyProperties 
+    \unset ChoirStaff.melismaBusyProperties
     \context Staff ="upper"  { \clef "G" <<
       \global
       \sop
       \alto
     >>}
-    
+
     \lyricsto "sop" \context Lyrics = "stanza-1" {
       \set stanza = "1."
       \stanzaa }
@@ -148,3 +193,4 @@ stanzaf = \lyricmode {
     >>}
   >>
 }
+\verses

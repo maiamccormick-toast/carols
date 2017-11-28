@@ -84,20 +84,20 @@ altoWordsII = \lyricmode {
   \set stanza = "2. "
   En Beth -- lé -- em‚
   Ma -- rie et  Jo -- seph vy‚
-  \set ignoreMelismata = ##t
-  l’as -- ne et le boeuf,
-  \unset ignoreMelismata
+  l'âne et le boeuf,
   l’en -- fant cou  -- ché au lit
   La crèche é -- tait
   au lieu d’un ber -- cel -- et;
 }
 
 altoWordsIII = \lyricmode {
+  \set stanza = "3. "
   Bien -- tôt les rois,
   par l'é -- toile é -- clair -- cis,
   De l'O -- ri -- ent dont
   ils é -- taient sor -- tis.
-  A Beth -- lé -- em vin -- rent un ma -- ti -- net;
+  A Beth -- lé -- em
+  vin -- rent un ma -- ti -- net;
 }
 
 altoWordsIV = \lyricmode {
