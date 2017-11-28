@@ -5,8 +5,9 @@
   arranger = "Michael Praetorius, 1571-1621"
   poet = "St. Germanus, 634-734"
   date=""
-  title = "Lo, How a Rose E'er Blooming"
-  metre = "Es Ist Ein Ros' Entsprungen"
+  title = "Es Ist Ein Ros' Entsprungen"
+  metre = "Lo, How a Rose E'er Blooming"
+  see_also = "Lo, How a Rose E'er Blooming"
   meter = \metre
   copyright = "Public Domain"
   style = "Hymn"
@@ -14,7 +15,7 @@
   mutopiapoet=\poet
   maintainer = "Maia McCormick"
   maintainerEmail = "maia.mcc@gmail.com"
-  lastupdated = "2011/Dec/12"
+  lastupdated = "2017/Nov/28"
 }
 
 \version "2.14.2"
@@ -76,9 +77,7 @@ bass = \context Voice = "bass"   {
 	c4 e f bes, f' c2 d g,
 	a4 bes c2 c <<f f,>>
   }}
-accomp=\chordmode {
 
-}
 stanzaa = \lyricmode {
   \set stanza = #"1. "
   Es ist ein Ros ent -- sprung -- en,
@@ -96,35 +95,51 @@ stanzab = \lyricmode {
   \set stanza = #"2. "
   Das Rös -- lein, das ich mein -- e,
   da -- von Je -- sai -- a sagt,
-  hat uns ge -- bracht al -- lei -- ne
-  Ma -- rie, die rei -- ne Magd.
-
+  ist Ma -- ri -- a die rei -- ne
+  die uns das Blüm -- lein bracht.
   \set associatedVoice = "tenors"
   Aus Got -- tes ew’ -- gem Rat
   \unset associatedVoice
   hat sie ein Kind ge -- bor -- en
-  wel -- ches uns se -- lig macht.
+  und blieb ein rei -- ne Magd.
 }
 
 stanzac = \lyricmode {
   \set stanza = #"3. "
-  O Je -- su, bis zum Schei -- den
-  aus die -- sem Jam -- mer -- tal
-  laß dein Hilf uns ge -- lei -- ten
-  hin in den Freud -- en -- saal,
-  in dei -- nes Vat -- ers Reich,
-  da wir dich e -- wig lo -- ben;
-  o Gott, uns das ver -- leih!
+  Das Blüm -- e -- lein, so klein -- e,
+  das duf -- tet uns __ so süß,
+  mit sein -- em hel -- len Schein -- e
+  ver -- treibt’s die Fin -- ster -- nis.
+  \set associatedVoice = "tenors"
+  Wahr Mensch und wahr -- er Gott,
+  \unset associatedVoice
+  hilft uns aus al -- lem Leid -- e,
+  ret -- tet von Sünd und Tod.
 }
 
-stanzad = \lyricmode {
-
+bassWordsa = \lyricmode {
+  \repeat unfold 10 { \skip 1 }
+  Wur -- zel zart,
+  \repeat unfold 10 { \skip 1 }
+  kam die Art
+  \repeat unfold 16 { \skip 1 }
+  hal -- ben Nacht.
 }
-stanzae = \lyricmode {
-
+bassWordsb = \lyricmode {
+  \repeat unfold 10 { \skip 1 }
+  -sai -- a sagt,
+  \repeat unfold 10 { \skip 1 }
+  Blüm -- lein bracht.
+  \repeat unfold 16 { \skip 1 }
+  rei -- ne Magd.
 }
-stanzaf = \lyricmode {
-
+bassWordsc = \lyricmode {
+  \repeat unfold 10 { \skip 1 }
+  uns so süß,
+  \repeat unfold 10 { \skip 1 }
+  Fin -- ster -- nis.
+  \repeat unfold 16 { \skip 1 }
+  Sünd und Tod.
 }
 
 verses = \markup{
@@ -149,22 +164,11 @@ verses = \markup{
       \line { She bore to men a Saviour, }
       \line { when half spent was the night. }
     }
-    \column{
-      \line { \bold "Verse 3:" }
-      \line { Reasonable verse goes here! }
-      \line { Reasonable verse goes here! }
-      \line { Reasonable verse goes here! }
-      \line { Reasonable verse goes here! }
-      \line { Reasonable verse goes here! }
-      \line { Reasonable verse goes here! }
-      \line { Reasonable verse goes here! }
-    }
   }
 }
 
 \score {	%\transpose d c
   \context ChoirStaff <<
-    \context ChordNames \accomp
     \unset ChoirStaff.melismaBusyProperties
     \context Staff ="upper"  { \clef "G" <<
       \global
@@ -187,6 +191,12 @@ verses = \markup{
       \tenor
       \bass
     >>}
+    % \lyricsto "bass" \context Lyrics = "bass-a" {
+      % \bassWordsa }
+    % \lyricsto "bass" \context Lyrics = "bass-b" {
+      % \bassWordsb }
+    % \lyricsto "bass" \context Lyrics = "bass-c" {
+      % \bassWordsc }
   >>
   \layout {
     indent = 0.0\pt
