@@ -12,7 +12,7 @@
   mutopiapoet=\poet
   maintainer = "Ben Kuhn"
   lastupdated = "2015/Dec/05"
-  see_also = "While Shepherds Watched their Flocks!Sherburne"
+  index_as = "While Shepherds Watched their Flocks!Sherburne"
 }
 
 \version "2.14.2"

@@ -5,7 +5,7 @@
   poet = "Robert Croo, 1534"
   composer = "16th Centry English Carol"
   arranger = "arr. Martin Fallas Shaw (1875-1958)"
-  see_also = "Lully, Lullay"
+  index_as = "Lully, Lullay"
 }
 
 \include "header.ly"

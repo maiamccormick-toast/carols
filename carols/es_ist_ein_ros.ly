@@ -7,7 +7,7 @@
   date=""
   title = "Es Ist Ein Ros' Entsprungen"
   metre = "Lo, How a Rose E'er Blooming"
-  see_also = "Lo, How a Rose E'er Blooming"
+  index_as = "Lo, How a Rose E'er Blooming"
   meter = \metre
   copyright = "Public Domain"
   style = "Hymn"

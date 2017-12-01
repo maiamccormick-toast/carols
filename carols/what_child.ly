@@ -9,7 +9,7 @@
   meter = "Greensleeves 8.7.8.7 with Refrain"
   %instrument = "SATB Choral"
   copyright = "Public Domain"
-  see_also = "Greensleeves"
+  index_as = "Greensleeves"
 }
 
 \include "header.ly"

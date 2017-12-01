@@ -5,7 +5,7 @@
   poet = "18th Century English"
   composer = "18th Century English"
   %arranger = \markup\oldStyleNum"Arranged by BHB"
-  see_also = "Wassail, Wassail"
+  index_as = "Wassail, Wassail"
 }
 
 global = {

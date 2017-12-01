@@ -15,7 +15,7 @@
   maintainer = "Ben Kuhn"
   maintainerEmail = "gord@angel.eicat.ca"
   lastupdated = "2012/Dec/24"
-  see_also = "Star in the East"
+  index_as = "Star in the East"
 }
 
 \version "2.14.2"

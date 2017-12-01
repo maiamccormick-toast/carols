@@ -5,7 +5,7 @@
   title = "The Wassail Song"
   poet = "Traditional"
   composer = "Traditional (Yorkshire)"
-  see_also = "Here We Come a-Wassailing"
+  index_as = "Here We Come a-Wassailing"
 }
 
 global = {

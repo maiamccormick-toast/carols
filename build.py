@@ -27,7 +27,7 @@ BOOKLET_PKG = NoEscape(r'\usepackage[print,1to1]{booklet}')
 # .ly "header" keys
 TITLE = 'title'
 TOC_AS = 'toc_as'
-SEE_ALSO = 'see_also'
+INDEX_AS = 'index_as'
 
 def argument_parser():
     parser = argparse.ArgumentParser()
@@ -107,15 +107,15 @@ class CarolInfo():
             # If file has a 'toc_as' header, use that as toc_entry instead
             toc_entry = headers[TOC_AS]
 
-        see_also = headers.get(SEE_ALSO)
+        index_as = headers.get(INDEX_AS)
 
         filename_base = os.path.splitext(os.path.basename(ly_filepath))[0]
         pdf_base = os.path.join(pdf_dir, filename_base)
 
-        return cls(ly_filepath, pdf_base, toc_entry, see_also)
+        return cls(ly_filepath, pdf_base, toc_entry, index_as)
 
     def __init__(self, ly_filepath: str, pdf_base: str,
-                 toc_entry: str=None, see_also: str=None):
+                 toc_entry: str=None, index_as: str=None):
         self.ly_filepath = ly_filepath
         self.pdf_base = pdf_base # pdf path without file extension
         self.pdf_filepath = '{}.pdf'.format(pdf_base)
@@ -126,7 +126,7 @@ class CarolInfo():
             # If we didn't get an explicit ToC entry, just use the name of the pdf :-/
             self.toc_entry = self.pdf_filepath
 
-        self.see_also = see_also
+        self.index_as = index_as
 
     def build_if_needed(self, force_build=False, silent=False):
         # target pdf already exists
@@ -288,9 +288,9 @@ class Document(pylatex.Document):
             c.build_if_needed(force_build=force_build, silent=silent)
 
             # For now, add the song to the doc with a single ToC entry; if
-            # there's a see_also, we'll index by that as well.
-            if c.see_also:
-                self.append(NoEscape('\\index{{{}}}'.format(c.see_also)))
+            # there's a index_as, we'll index by that as well.
+            if c.index_as:
+                self.append(NoEscape('\\index{{{}}}'.format(c.index_as)))
             self.append(NoEscape(fmtstr.format(c.toc_entry, c.pdf_filepath)))
 
     def end_matter(self):
