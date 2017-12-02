@@ -6,17 +6,17 @@
   arranger = "arr. Thomas Helmore"
   poet = "trans. John M. Neale and Henry Sloane Coffin"
   date=""
-  title = "O Come O Come Emmanuel"
-  index_as = "Veni, Veni Emmanuel"
+  title = "Veni, Veni Emmanuel"
+  index_as = "O Come O Come Emmanuel"
   metre = "8.8.8.8.8.8. with Refrain"
   meter = \metre
   copyright = "Public Domain"
   style = "Hymn"
   mutopiacomposer = \composer
   mutopiapoet=\poet
-  maintainer = "Gordon Gilbert"
-  maintainerEmail = "gord@angel.eicat.ca"
-  lastupdated = "2011/Dec/11"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2017/Dec/2"
 }
 \include "header.ly"
 global = {
@@ -24,7 +24,6 @@ global = {
   \key e \minor
   \time 4/4
   \partial 4
-  #(set-global-staff-size 13)
 }
 
 sop = \context Voice = "sop" {
@@ -147,8 +146,7 @@ bass = \context Voice = "bass" {
   }
 }
 
-latin = \lyricmode {
-  \lyricItal
+stanzaa = \lyricmode {
   Ve -- ni, ve -- ni Em -- man -- u -- el!
   Cap -- ti -- vum sol -- ve Is -- ra -- el!
   Qui ge -- mit in ex -- i -- li -- o,
@@ -156,32 +154,49 @@ latin = \lyricmode {
   Gau -- de, gau -- de, Em -- man -- u -- el
   Na -- sce -- tur pro te, Is -- ra -- el.
 }
-
-stanzaa = \lyricmode {
-  O come, O come, Em -- man -- u -- el,
-  And ran -- some cap -- tive Is -- ra -- el,
-  That mourns in lone -- ly ex -- ile here
-  Un -- til the Son of God ap -- pear.
-  Re -- joice! Re -- joice! Em -- man -- u -- el
-  Shall come to thee, O Is -- ra -- el!
-}
 stanzab = \lyricmode {
-  O come, Thou Wis -- dom from on high,
-  Who ord -- 'rest all things migh -- ti -- ly;
-  To us the path of knowl -- edge show,
-  And teach us in her ways to go.
+  Ve -- ni, O Sap -- i -- en -- ti -- a,
+  quae hic dis -- po -- nis om -- ni -- a,
+  ve -- ni, vi -- am pru -- den -- ti -- ae
+  ut do -- ce -- as et glo -- ri -- ae.
 }
 stanzac = \lyricmode {
-  O come, Thou Day -- spring from on high,
-  And cheer us by Thy draw -- ing nigh;
-  Dis -- perse the gloom -- y clouds of night,
-  And death's dark sha -- dow put to flight.
+  Ve -- ni, ve -- ni, A -- do -- na -- i,
+  qui pop -- u -- lo in Si -- na -- i
+  le -- gem de -- dis -- ti ver -- ti -- ce
+  in ma -- jes -- ta -- te glo -- ri -- ae.
 }
 stanzad = \lyricmode {
-  O come, De -- sire of na -- tions, bind
-  In one the hearts of all man -- kind;
-  Bid Thou our sad di -- vi -- sions cease,
-  And be Thy -- self our King of Peace.
+  Ve -- ni, O Jess -- e vir -- gu -- la,
+  ex host -- is tu -- os un -- gu -- la,
+  de spec -- u tu -- os tar -- tar -- i
+  e -- duc et an -- tro bar -- a -- thri.
+}
+
+verses = \markup{
+  \fill-line {
+    \column {
+      \line { \bold "5." }
+      \line { Veni, Clavis Davidica, }
+      \line { regna reclude caelica, }
+      \line { fac iter tutum superum, }
+      \line { et claude vias inferum. }
+    }
+    \column {
+      \line { \bold "6." }
+      \line { Veni, veni O Oriens, }
+      \line { solare nos adveniens, }
+      \line { noctis depelle nebulas, }
+      \line { dirasque mortis tenebras. }
+    }
+    \column {
+      \line { \bold "7." }
+      \line { Veni, veni, Rex Gentium, }
+      \line { veni, Redemptor omnium, }
+      \line { ut salvas tuos famulos }
+      \line { peccati sibi conscios. }
+    }
+  }
 }
 
 \score {
@@ -193,9 +208,6 @@ stanzad = \lyricmode {
       \alto
     >>}
 
-    \lyricsto "sop" \context Lyrics = "stanza-l" {
-      \set stanza = "Latin."
-      \latin }
     \lyricsto "sop" \context Lyrics = "stanza-1" {
       \set stanza = "1."
       \stanzaa }
@@ -208,9 +220,9 @@ stanzad = \lyricmode {
     \lyricsto "sop" \context Lyrics = "stanza-4" {
       \set stanza = "4."
       \stanzad }
-                                %	\lyricsto "sop" \context Lyrics = "stanza-6" {
-                                %		\set stanza = "6."
-                                %			\stanzaf }
+    %	\lyricsto "sop" \context Lyrics = "stanza-6" {
+    %		\set stanza = "6."
+    %			\stanzaf }
     \context Staff = "lower"  { \clef "F"<<
       \global
       \tenor
@@ -218,3 +230,4 @@ stanzad = \lyricmode {
     >>}
   >>
 }
+\verses
