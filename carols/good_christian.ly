@@ -4,16 +4,16 @@
   composer = "German melody, 14th cent."
   poet = "Rev. John M. Neale, 1853"
   date=""
-  title = "Good Christian Men Rejoice"
+  title = "Good Christian Friends, Rejoice"
   metre = "In Dulci Jubilo P.M."
   meter = \metre
   copyright = "Public Domain"
   style = "Hymn"
   mutopiacomposer = \composer
   mutopiapoet=\poet
-  maintainer = "Gordon Gilbert"
-  maintainerEmail = "gord@angel.eicat.ca"
-  lastupdated = "2012/Dec/24"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2017/Dec/02"
 }
 
 \version "2.14.2"
@@ -81,7 +81,7 @@ accomp=\chordmode {
 
 }
 stanzaa = \lyricmode {
-  Good Christ -- ian men, re -- joice,
+  Good Christ -- ian friends, re -- joice,
   With heart and soul and voice,
   Give ye heed to what we say:
   News! News!
@@ -93,18 +93,18 @@ stanzaa = \lyricmode {
 }
 
 stanzab = \lyricmode {
-  Good Christ -- ian men, re -- joice,
+  Good Christ -- ian friends, re -- joice,
   With heart and soul and voice;
   Now ye hear of end -- less bliss:
   Joy! Joy!
   Je -- sus Christ was born for this!
   He hath op'ed the heaven -- ly door,
-  And man is bless -- ed ev -- er -- more.
+  And we are bless -- ed ev -- er -- more.
   Christ was born for this!
   Christ was born for this!
 }
 stanzac = \lyricmode {
-  Good Christ -- ian men, re -- joice,
+  Good Christ -- ian friends, re -- joice,
   With heart and soul and voice;
   Now ye need not fear the grave:
   Peace! Peace!
