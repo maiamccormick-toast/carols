@@ -1,9 +1,12 @@
 \header {
-  enteredby = "Maia McCormick"
   composer = "W.J. Kirkpatrick (1838-1921)"
   arranger = "arr. David Wilcocks"
   poet = "19th cen. American"
   title = "Away in a Manger"
+  enteredby = "Maia McCormick"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2017/Dec/01"
 }
 
 \version "2.14.2"
@@ -40,7 +43,7 @@ tenor = \context Voice = "tenor" \relative c' {
   \partial 4 c8( bes) |
   a4 a bes8( c) | a4 a c | f4. g8 e4 | d( c) bes8( a) |
   g4 c g | c c d | b a b | c2 c4 |
-  c8( bes) a4 bes8( c) | a( bes) c( d) e( d) | c4 f,8( g) a4 | bes8[( c d c)] bes( a) |
+  c8( bes) a4 bes8( c) | a( bes) c( d) e( d) | c4 f,8( g) a4 | bes8( c d c) bes( a) |
   g4 c g | c c a | d c8( bes) a( g) | f2 \bar "|."
 }
 
@@ -49,7 +52,7 @@ bass = \context Voice = "bass" \relative c' {
   \partial 4 a8( g) |
   f4 f f | f f f | f f f | f2 f4 |
   e e e | f e d | g g g | c,2 c'8( bes) |
-  a( g) f( e) d( c) | f( g) a( bes) c( bes) | a( g) f( e) d( f) | g[( a bes a)] g( f) |
+  a( g) f( e) d( c) | f( g) a( bes) c( bes) | a( g) f( e) d( f) | g( a bes a) g( f) |
   e( d) e( c) d( e) | f( g) a4 d,8( c) | bes4 g c | f,2 \bar "|."
 }
 

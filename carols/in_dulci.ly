@@ -6,6 +6,9 @@
   title = "In ducli jubilo"
   poet = "Heinrich Seuse (1300–1366)"
   composer = "14th Century German Melody"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2017/Dec/01"
 }
 
 global = {
@@ -42,9 +45,9 @@ sopWords = \lyricmode {
 
 altoMusic = \relative c' {
   c4 |
-  d2 c4 f4. e8 d4 |
+  d2 c4 f4.( e8) d4 |
   c2( f4 e2) f4 |
-  d2 c4 f4. e8 d4 |
+  d2 c4 f4.( e8) d4 |
   c2( f4 e2) s4 |
 
   f2 f4 e2 g4 |

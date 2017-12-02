@@ -3,8 +3,11 @@
 \header {
   title = "The Holly and the Ivy"
   poet = "17th Century English"
-  arranger = "arr. A.L.R."
+  arranger = "arr. A.L.R., B.H.B." % intermingled by MM
   composer = "English"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2017/Dec/01"
 }
 global = {
   \preamble
@@ -25,10 +28,10 @@ sopMusic = \relative c'' {
   b8 a g4 \slurDotted b8( b) |
   e, e d4 \slurSolid g8[ a] |
   b c b4 \slurDotted a8( a) |
-  g2 b8\rest \bar""\break
+  g2 \bar""\break
 
-  g8 |
-  g g g4 e'4 |
+  g4 |
+  g8 g g4 e'4 |
   \slurSolid d( b) g8 g |
   g g g4 e' |
   d2 \bar""\break
@@ -55,10 +58,10 @@ altoMusic = \relative c' {
   g8 fis g4 \slurDotted fis8( fis) |
   e8 e d4 \slurSolid e8[ g] |
   g8 g g4 \slurDotted fis8( fis) |
-  g2 s8
+  g2
 
-  e8 |
-  d d d4 \slurSolid e8[ fis] |
+  e4 |
+  d8 d d4 \slurSolid e8[ fis] |
   g2 e8 e |
   d d e4 g |
   g( fis)
@@ -128,10 +131,10 @@ tenorMusic = \relative c' {
   d8 d d4 \slurDotted d8( d) |
   c c b4 \slurSolid c8[ e] |
   d e d4 \slurDotted d8( c) |
-  b2 s8
+  b2
 
-  c8 |
-  b c d4 c |
+  c4 |
+  b8 c d4 c |
   \slurSolid b( d) b8 b |
   b b b4 c |
   d2
@@ -157,10 +160,10 @@ bassMusic = \relative c' {
   g8 a b4 \slurDotted b8( b) |
   c8 c b4 \slurSolid c8[ c,] |
   d d d4 \slurDotted d8( d) |
-  g2 d8\rest
+  g2
 
-  g8 |
-  g a b4 a4 |
+  g4 |
+  g8 a b4 a4 |
   g2 e8 e |
   g g e4 c' |
   \slurSolid

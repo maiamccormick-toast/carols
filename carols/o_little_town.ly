@@ -5,16 +5,17 @@
   poet = "Bishop Phillips Brooks, 1868"
   date=""
   title = "O Little Town of Bethlehem"
+  toc_as = "O Little Town of Bethlehem (Lewis H. Redner)"
+  index_as = "O Little Town of Bethlehem!Redner"
   metre = "St. Louis 8.6.8.6.D."
   meter = \metre
   copyright = "Public Domain"
   style = "Hymn"
   mutopiacomposer = \composer
   mutopiapoet=\poet
-  maintainer = "Gordon Gilbert"
-  maintainerEmail = "gord@angel.eicat.ca"
-  lastupdated = "2011/Dec/12"
-  toc_as = "O Little Town of Bethlehem (Lewis H. Redner)"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2017/Dec/01"
 }
 
 \version "2.14.2"
@@ -28,39 +29,43 @@ global= {
 
 sop = \context Voice = "sop"    {
   \voiceOne
-  b'4 b' b' ais' b' d''( c'') e'
-  a' g' fis'8 \melisma g' \melismaEnd a'4 d' b'2.
-  b'4 b' b' e'' d'' d'' c'' e'
-  a' g' fis'8 \melisma g' \melismaEnd b'4 a' g'2.
-  b'4 b' b' a' g' fis'2 fis'4
-  fis'4 e' fis' g' a' b'2.
-  b'4 b' b' ais' b' d'' c'' e'
-  e'' d'' g' b'4. a'8 g'2. \bar "|."
+  \slurDotted
+  b'4 | b' b' ais' b' | d''( c'') e' a' |
+  \slurSolid
+  g' fis'8( g') a'4 d' | b'2. b'4 |
+  b' b' e'' d'' | d'' c'' e' a' |
+  g' fis'8( g') b'4 a' | g'2. b'4 |
+  b' b' a' g' | fis'2 fis'4 fis'4 |
+  e' fis' g' a' | b'2. b'4 |
+  b' b' ais' b' | d'' c'' e' e'' |
+  d'' g' b'4. a'8 g'2. \bar "|."
 
 }
 
 alto=\context Voice = "alto"   {
   \voiceTwo
-  d'4 d' d' cis' d' f' e' c'
-  e' d' d' d' d' d'2.
-  d'4 d' g' gis' gis' a' e' c'
-  e' d' d' fis' fis' g'2.
-  g'4 g' g' fis' e' dis'2 dis'4
-  dis' e' fis' g' e' fis'2.
-  g'4 d' d' cis' d' e' e' c'
-  e'8 fis' g'4 cis' d'4. c'8 b2.
+  \slurDotted
+  d'4 | d' d' cis' d' | f'( e') c' e' |
+  \slurSolid
+  d' d' d' d' | d'2. d'4 |
+  d' g' gis' gis' | a' e' c' e' |
+  d' d' fis' fis' | g'2. g'4 |
+  g' g' fis' e' | dis'2 dis'4 dis' |
+  e' fis' g' e' | fis'2. g'4 |
+  d' d' cis' d' | e' e' c' e'8( fis') |
+  g'4 cis' d'4. c'8 | b2.
 }
 
 tenor = \context Voice = "tenor"   {
   \voiceOne
   g4 g g g g gis a a
-  c' b a8 b c'4 c' b2.
+  c' b a8( b) c'4 c' b2.
   g4 g b b e' e' e' e'
-  c' b ais8 b d'4 c' b2.
+  c' b ais8( b) d'4 c' b2.
   d'4 d' b c' cis' dis'2 dis'4
   b e fis g e' dis'2.
   d'4 d' b g g gis a a
-  c' b b8 g g4. fis8 g2.
+  c' b b8( g) g4. fis8 g2.
 }
 
 bass = \context Voice = "bass"   {

@@ -3,8 +3,8 @@
   composer = "Franz Gruber, 1818"
   poet = "Rev. Joseph Mohr, 1818"
   date="trans 1863 by Jane Campbell"
-  title = "Silent Night"
-  metre = "Silent Night P.M."
+  title = "Stille Nacht"
+  index_as = "Silent Night"
   meter = \metre
   copyright = "Public Domain"
   style = "Hymn"

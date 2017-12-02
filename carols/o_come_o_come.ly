@@ -7,6 +7,7 @@
   poet = "trans. John M. Neale and Henry Sloane Coffin"
   date=""
   title = "O Come O Come Emmanuel"
+  index_as = "Veni, Veni Emmanuel"
   metre = "8.8.8.8.8.8. with Refrain"
   meter = \metre
   copyright = "Public Domain"
@@ -34,17 +35,17 @@ sop = \context Voice = "sop" {
     a( c b) a |
     g2. a4 |
     b g e g |
-    
+
     a( fis e) d |
     e2. a4 |
     a e e fis |
     g2( fis4) e |
-    
+
     d2. g4 |
     a b b b |
     a( c b) a |
     g2. \bar "||" \break
-    
+
     d'4 |
     d2. b4 |
     b2. b4 |
@@ -64,12 +65,12 @@ alto = \context Voice = "alto" {
     g2. fis4 |
     g2. d4 |
     d d c b |
-    
+
     c2(  b4) b |
     b2. e8[ d] |
     c4 c e dis |
     e2( d4) cis |
-    
+
     d2. b4 |
     d d d g |
     g2. fis4 |
@@ -94,17 +95,17 @@ tenor = \context Voice = "tenor" {
     e2( d4) c |
     b2. fis4 |
     g g g g |
-    
+
     e( a g) fis |
     g2. a4 |
     a a b a |
     b( a a) g |
-    
+
     fis2. g4 |
     fis fis g d' |
     e2( d4) c |
     b2. |
-    
+
     b4 |
     a2. e'4 |
     d2. d4 |
@@ -124,17 +125,17 @@ bass = \context Voice = "bass" {
     c( a b) d |
     e2. d4 |
     g, b c e |
-    
+
     a,2( b4) b |
     e2. c8[ b] |
     a4 a' g fis |
     e( cis d) a |
-    
+
     d2. e4 |
     d b g b |
     c( a b) d |
     g,2. |
-    
+
     g'4 |
     d2. e4 |
     b2. g4 |
@@ -185,13 +186,13 @@ stanzad = \lyricmode {
 
 \score {
   \context ChoirStaff <<
-    \unset ChoirStaff.melismaBusyProperties 
+    \unset ChoirStaff.melismaBusyProperties
     \context Staff ="upper"  { \clef "G" <<
       \global
       \sop
       \alto
     >>}
-    
+
     \lyricsto "sop" \context Lyrics = "stanza-l" {
       \set stanza = "Latin."
       \latin }

@@ -41,8 +41,8 @@ sop = \context Voice = "sop"    {
 
 alto=\context Voice = "alto"   {
   \voiceTwo
-  c'4 d'2 c'4 f' e' d' c'2( f'4 e'2)
-  f'4 d'2 c'4 f' e' d' c'2( f'4 e'2.)
+  c'4 d'2 c'4 f'( e') d' c'2( f'4 e'2)
+  f'4 d'2 c'4 f'( e') d' c'2( f'4 e'2.)
   f'2 f'4 e'2 e'4 f'2 e'4 f'2.
   f' f'
   d'2 g'4 f'2 e'4 f'2 f'4 f'2.
@@ -50,7 +50,7 @@ alto=\context Voice = "alto"   {
   f'4 f'2 f'4 f'2 e'4 f'2 f'4 f'2.
   d'2 bes4 d'2 c'4 c'2.( f'2 e'4)
   f'2 f'4 f'2 e'4 f'2. ~ f'2
-}	
+}
 
 tenor = \context Voice = "tenor"   {
   \voiceOne
@@ -78,7 +78,7 @@ bass = \context Voice = "bass"   {
   f2 d4 bes,2 c4 f2.~f2
 }
 accomp=\chordmode {
-  
+
 }
 stanzaa = \lyricmode {
   Good Christ -- ian men, re -- joice,
@@ -87,7 +87,7 @@ stanzaa = \lyricmode {
   News! News!
   Je -- sus Christ is born to -- day
   Ox and ass be -- fore Him bow,
-  And He is in the man -- ger now, 
+  And He is in the man -- ger now,
   Christ is born to -- day!
   Christ is born to -- day!
 }
@@ -113,27 +113,27 @@ stanzac = \lyricmode {
   To gain His ev -- er -- las -- ting hall:
   Christ was born to save,
   Christ was born to save.
-}	
+}
 stanzad = \lyricmode {
-  
-}	
+
+}
 stanzae = \lyricmode {
-  
+
 }
 stanzaf = \lyricmode {
-  
+
 }
 
 \score {	%\transpose d c
   \context ChoirStaff <<
     \context ChordNames \accomp
-    \unset ChoirStaff.melismaBusyProperties 
+    \unset ChoirStaff.melismaBusyProperties
     \context Staff ="upper"  { \clef "G" <<
       \global
       \sop
       \alto
     >>}
-    
+
     \lyricsto "sop" \context Lyrics = "stanza-1" {
       \set stanza = "1."
       \stanzaa }
