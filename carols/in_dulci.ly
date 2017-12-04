@@ -100,7 +100,7 @@ altoWordsIV = \lyricmode {
   \set stanza = #"4. "
   \markup\italic U -- \markup\italic bi \markup\italic sunt \markup\italic gau -- \markup\italic di -- \markup\italic a __
   In an -- y place  but there?
-  There are an -- gels sing -- ing ""
+  There are an -- gels sing -- ing \skip 1
   \markup\italic No -- \markup\italic va \markup\italic can -- \markup\italic ti -- \markup\italic ca __
   And there the bells are ring -- ing
   \markup\italic In \markup\italic Re -- \markup\italic gis \markup\italic cu -- \markup\italic ri -- \markup\italic a __
@@ -122,7 +122,7 @@ tenorMusic = \relative c' {
   c2 bes4 g2 e4 |
   f2. a2 a4 |
   d2 d4 c4.( d8) bes4 |
-  a2( bes4)~ c2. |
+  a2( bes4 c2.) |
 
   a2 a4 g2 g4 |
   a2( bes4 g2.) |

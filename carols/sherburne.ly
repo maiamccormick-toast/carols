@@ -106,9 +106,9 @@ stanzaa = \lyricmode {
   All seat -- ed on the ground,
 }
 filler = \lyricmode {
-  % ugh can't figure out how to skip multiple measures
-  "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+  \repeat unfold 14 { \skip 1 }
 }
+
 stanzab = \lyricmode {
   All glo -- ry be to God on high, And to the earth be peace
 }

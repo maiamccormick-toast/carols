@@ -3,7 +3,6 @@
   enteredby = "Gordon Gilbert and Ben Kuhn"
   composer = "Edward Storrs Willis, 1819-1900"
   poet = "Edmund Hamilton Sears, 1810-1876"
-  date=""
   title = "It Came Upon the Midnight Clear"
   metre = "Carol 8.6.8.6.D."
   meter = \metre

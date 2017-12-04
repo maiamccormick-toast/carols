@@ -94,7 +94,7 @@ alto=\context Voice = "alto"   {
     d2 e4( fis) |
     g2 g4 g |
     g( fis) e dis |
-    e2.
+    b2.
   }
 }
 

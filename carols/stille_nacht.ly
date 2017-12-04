@@ -5,7 +5,6 @@
   date="trans 1863 by Jane Campbell"
   title = "Stille Nacht"
   index_as = "Silent Night"
-  meter = \metre
   copyright = "Public Domain"
   style = "Hymn"
   mutopiacomposer = \composer

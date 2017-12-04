@@ -134,9 +134,9 @@ stanzaa = \lyricmode {
   In the bleak mid -- win -- ter,
   fros -- ty wind made moan,
   Earth stood hard as i -- _ ron,
-  wa -- ter like a stone, ""
-  Snow had fal -- len, snow on snow, ""
-  snow __ _ on __ _ snow, ""
+  wa -- ter like a stone, \skip 1
+  Snow had fal -- len, snow on snow, \skip 1
+  snow __ _ on __ _ snow, \skip 1
   In the bleak mid -- win -- ter,
   \set ignoreMelismata = ##f
   Long a -- go.
@@ -147,7 +147,7 @@ stanzab = \lyricmode {
   Hea -- ven can -- not hold Him
   Nor __ _ earth sus -- tain;
   Heav’n and earth shall flee a -- way
-  When He comes to reign; ""
+  When He comes to reign; \skip 1
   In the bleak mid -- win -- _ ter a sta -- ble place suf -- ficed
   The Lord __ _ God Al -- migh -- ty,
   \set ignoreMelismata = ##f
@@ -158,8 +158,8 @@ stanzac = \lyricmode {
   An -- gels and arch -- an -- gels May have ga -- thered there
   Cher -- u -- bim and Ser -- a -- phim
   Throng -- _ ed the air
-  But on -- ly His __ _ mo -- _ ther ""
-  In her maid -- en bliss ""
+  But on -- ly His __ _ mo -- _ ther \skip 1
+  In her maid -- en bliss \skip 1
   Wor -- shipped the Be -- lov -- ed
   \set ignoreMelismata = ##f
   with a kiss.
@@ -169,8 +169,8 @@ stanzad = \lyricmode {
   What __ _ can I give Him,
   Poor __ _ as I am?
   If I were a shep -- _ herd
-  I would bring a lamb; ""
-  If I were a wise __ _ man ""
+  I would bring a lamb; \skip 1
+  If I were a wise __ _ man \skip 1
   I would do my part;
   Yet what I can I give Him
   \set ignoreMelismata = ##f
