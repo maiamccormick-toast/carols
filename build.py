@@ -187,8 +187,10 @@ class Document(pylatex.Document):
         # Add packages
         self.preamble.append(Package('titlesec'))
         self.preamble.append(Package('pdfpages'))
-        self.preamble.append(Package('graphicx'))
         self.preamble.append(Package('makeidx'))
+        self.preamble.append(Package('graphicx'))
+
+        self.preamble.append(NoEscape(r'\graphicspath{ {resources/} }'))
 
         if self.mode == HANDOUT:
             # Presumably we don't care about clickable links in booklet mode, only
@@ -240,7 +242,16 @@ class Document(pylatex.Document):
         # Ignore page numbers until we get to the actual body
         self.append(NoEscape(r'\pagenumbering{gobble}'))
 
+        coverImg = r"""
+            \begin{figure}[h]
+            \vspace{3.0cm}
+            \includegraphics[width=\textwidth]{coverImg}
+            \centering
+            \end{figure}
+        """
+
         self.append(NoEscape(r'\maketitle'))
+        self.append(NoEscape(coverImg))
         self.append(NoEscape(r'\clearpage'))
         self.append(NoEscape(r'\tableofcontents'))
         self.append(NoEscape(r'\clearpage'))
