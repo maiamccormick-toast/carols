@@ -4,8 +4,9 @@
   title = "The Wexford Carol"
   poet = "Traditional, 16th Century or earlier"
   composer = "Traditional"
-                                %arranger = \markup\oldStyleNum"Edited by Benjamin Bloomfield (1984–)"
+  % arranger = \markup\oldStyleNum"Edited by Benjamin Bloomfield (1984–)"
 }
+
 global = {
   \preamble
   \key g \major
@@ -66,6 +67,7 @@ altoMusic = \relative c' {
   e8 d \slurDotted d( f4) e8 |
   e d b4.
 }
+
 altoWords = \lyricmode {
   \set stanza = #"1. "
   \set associatedVoice = "tenors"
@@ -82,8 +84,8 @@ altoWords = \lyricmode {
   bless -- ed Mes -- si -- ah born.
   \unset ignoreMelismata
 }
+
 altoWordsII = \lyricmode {
-                                %\markup\italic
   \set stanza = #"2. "
   \set associatedVoice = "tenors"
   The night be -- fore that hap -- py tide,
@@ -96,58 +98,32 @@ altoWordsII = \lyricmode {
   Was but a hum -- ble ox -- ’s stall.
 }
 
-verses = \markup { \fill-line{
-  \hspace #0.1
-  \column {
-  \line { \bold "3." Let all your songs and praises be, }
-  \line { Unto His Heav’nly Majesty; }
-  \line { And evermore, amongst our mirth, }
-  \line { Remember Christ our Savior’s birth. }
-  \line { That night the Virgin Mary mild, }
-  \line { Was safe deliver’d of a child; }
-  \line { According unto Heav’n’s decree, }
-  \line { Man’s sweet salvation for to be. }
-  \vspace #0.1
-  \line { \bold "5." With thankful heart and joyful mind, }
-  \line { The shepherds went the  babe to find, }
-  \line { And as God’s angels had foretold, }
-  \line { They did our Savior Christ behold. }
-  \line { Within a manger He was laid, }
-  \line { And by His side the virgin maid }
-  \line { Attending on the Lord of Life }
-  \line { Who came to earth to end all strife. }
-  }
-  \hspace #0.1
-  \column{
-  \line { \bold "4." Near Bethlehem did shepherds keep }
-  \line { Their flocks of lambs and feeding sheep; }
-  \line { To whom God’s angels did appear, }
-  \line { Which put the shepherds in great fear. }
-  \line { “Prepare and go,” the angels said, }
-  \line { “To Bethlehem. Be not afraid }
-  \line { For there you’ll find this happy morn }
-  \line { A princely babe sweet Jesus born.” }
-  \vspace #0.1
-  \line { \bold "6." See how the Lord of Heav’n and earth, }
-  \line { Show’d Himself lowly in His birth; }
-  \line { A sweet example for mankind, }
-  \line { To learn to bear a humble mind. }
-  \line { If quires of Angels did rejoice, }
-  \line { Well may mankind with heart and voice }
-  \line { Sing praises to the God of Heav’n, }
-  \line { That unto us His Son has giv’n. }
-  }
-  \hspace #0.1
-}}
-altoWordsIV = \lyricmode {
+altoWordsIII = \lyricmode {
+  \set stanza = #"3. "
+  \set associatedVoice = "tenors"
+  Near Beth -- le -- hem did shep -- herds keep
+  Their flocks of lambs and feed -- ing sheep;
+  To whom God’s an -- gels did ap -- pear,
+  Which put the shep -- herds in great fear.
+  “Pre -- pare and go,” the an -- gels said,
+  “To Beth -- le -- hem. Be not a -- fraid
+  For there you’ll find this hap -- py morn
+  A prince -- ly babe sweet Je -- sus born.”
 }
-altoWordsV = \lyricmode {
 
+altoWordsIV = \lyricmode {
+  \set stanza = #"4. "
+  \set associatedVoice = "tenors"
+  See how the Lord of Heav’n and earth,
+  Show’d Him -- self low -- ly in His birth;
+  A sweet ex -- am -- ple for man -- kind,
+  To learn to bear a hum -- ble mind.
+  If choirs of An -- gels did re -- joice,
+  Well may man -- kind with heart and voice
+  Sing prais -- es to the God of Heav’n,
+  That un -- to us His Son has giv’n.
 }
-altoWordsVI = \lyricmode {
-  \set stanza = #"6. "
-  \set ignoreMelismata = ##t
-}
+
 tenorMusic = \relative c {
   d8 |
   g a b8.( c16 d8) d |
@@ -208,9 +184,10 @@ bassMusic = \relative c {
         \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
         \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
       >>
+      \new Lyrics = "altosIV"  \with { alignBelowContext = #"women" } \lyricsto "altos" \altoWordsIV
+      \new Lyrics = "altosIII"  \with { alignBelowContext = #"women" } \lyricsto "altos" \altoWordsIII
       \new Lyrics = "altosII"  \with { alignBelowContext = #"women" } \lyricsto "altos" \altoWordsII
       \new Lyrics = "altos"  \with { alignBelowContext = #"women" } \lyricsto "altos" \altoWords
     >>
   >>
 }
-\verses
