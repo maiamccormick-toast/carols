@@ -6,7 +6,7 @@
   date=""
   title = "O Little Town of Bethlehem"
   toc_as = "O Little Town of Bethlehem (Lewis H. Redner)"
-  index_as = "O Little Town of Bethlehem!Redner"
+  % index_as = "O Little Town of Bethlehem!Redner"
   metre = "St. Louis 8.6.8.6.D."
   meter = \metre
   copyright = "Public Domain"

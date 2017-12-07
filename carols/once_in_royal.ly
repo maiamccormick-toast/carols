@@ -5,7 +5,7 @@
   composer = "H.J. Gauntlett (1805-76)"
   arranger = "arr. A.H. Mann (1850-1929)"
   poet = "C.F. Alexander (1818-95)"
-  title = "Once in royal David's city"
+  title = "Once in Royal David's City"
   maintainer = "Maia McCormick"
   maintainerEmail = "maia.mcc@gmail.com"
   lastupdated = "2017/Dec/2"
