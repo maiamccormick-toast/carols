@@ -7,6 +7,9 @@
   poet = "Traditional"
   composer = "Traditional"
   enteredby = "Benjamin Bloomfield (Collection of Christmas Carols)"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2017/Dec/07"
 }
 
 global = {

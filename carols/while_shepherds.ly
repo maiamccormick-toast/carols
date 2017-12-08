@@ -6,6 +6,9 @@
   poet = "Nahum Tate (1652–1715)"
   composer = "'Winchester Old' by George Kirbye (c. 1565–1634)"
   enteredby = "Benjamin Bloomfield (Collection of Christmas Carols)"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2017/Dec/07"
 }
 
 global = {
