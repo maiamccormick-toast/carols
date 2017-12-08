@@ -30,7 +30,9 @@ global= {
 
 sop = \context Voice = "sop"    {
   \voiceOne
-  aes'4 aes'2 ees'4 aes' bes'2 ees'
+  \small aes'4 |
+  \normalsize
+  aes'2 ees'4 aes' bes'2 ees'
   c''4 bes' c'' des'' c''2 bes'4 \small aes'
   \normalsize
   aes'2 g'4 f' \slurDashed g'( aes') \slurSolid bes' c'' g'2( f'4.) ees'8 ees'1
@@ -44,7 +46,9 @@ sop = \context Voice = "sop"    {
 
 alto=\context Voice = "alto"   {
   \voiceTwo
-  ees'4 ees'2 ees'4 ees' ees'2 ees' ees'4 ees' ees' f' ees'2 ees'4 \small c'
+  \small ees'4 |
+  \normalsize
+  ees'2 ees'4 ees' ees'2 ees' ees'4 ees' ees' f' ees'2 ees'4 \small c'
   \normalsize
   c'( d') ees' d' \slurDashed ees'4( ees') \slurSolid ees' ees' ees'2( d'4.) ees'8 ees'1
   ees'2 f'8 g' aes'4 aes'( g') aes'2 ees'4 ees' f' f' ees'2 ees'4
@@ -55,7 +59,8 @@ alto=\context Voice = "alto"   {
 
 tenor = \context Voice = "tenor"   {
   \voiceOne
-  c'4 c'2 c'4 c' des'2 bes aes4 bes aes aes aes2 g4 \small aes
+  \small c'4 |
+  \normalsize c'2 c'4 c' des'2 bes aes4 bes aes aes aes2 g4 \small aes
   \normalsize
   aes2 bes4 bes \slurDashed bes( aes) \slurSolid g ees bes2( aes4.) g8 g1
   c'2 des'4 ees' ees'2 ees' ees'4 aes c' des' bes4.( aes8) g4
@@ -65,7 +70,8 @@ tenor = \context Voice = "tenor"   {
 
 bass = \context Voice = "bass"   {
   \voiceTwo
-  aes4 aes2 aes4 aes aes2 g aes4 g aes des ees2 \small ees4
+  \small aes4 |
+  \normalsize aes2 aes4 aes aes2 g aes4 g aes des ees2 \small ees4
   \normalsize
   f4 f2 ees4 bes, \slurDashed ees( c) g, \slurSolid aes, bes,2 ~ bes,4. ees8 ees1
   c'2 bes4 aes bes2 aes g4 aes f des ees2 ees4 r4

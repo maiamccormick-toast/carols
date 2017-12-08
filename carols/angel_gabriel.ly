@@ -51,7 +51,7 @@ altoMusic = \relative c' {
   bes2.~ bes4
 }
 altoWords = \lyricmode {
-  \set stanza = #"1. "
+  \set stanza = #"  1. "
   The an -- gel Ga -- bri -- el from heav -- en came,
   His wings as drif -- ted snow, his eyes as flame;
   “All hail,” said he, “thou low -- ly maid -- en Ma -- ry,
@@ -60,7 +60,7 @@ altoWords = \lyricmode {
   Glo -- ri -- a!
 }
 altoWordsII = \lyricmode {
-  \set stanza = #"2. "
+  \set stanza = #"  2. "
   “For known a bles -- sed Mo -- ther thou shalt be,
   All ge -- ne -- ra -- tions laud and hon -- or thee,
   Thy Son shall be Em -- man -- u -- el, by
@@ -73,7 +73,7 @@ altoWordsII = \lyricmode {
   Glo -- ri -- a!
 }
 altoWordsIII = \lyricmode {
-  \set stanza = #"3. "
+  \set stanza = #"  3. "
   Then gen -- tle Ma -- ry meek -- ly bowed her head,
   “To me be as it plea -- seth God,” she said,
   “My soul shall laud and mag -- ni -- fy His
@@ -86,7 +86,7 @@ altoWordsIII = \lyricmode {
   Glo -- ri -- a!
 }
 altoWordsIV = \lyricmode {
-  \set stanza = #"4. "
+  \set stanza = #"  4. "
   Of her, Em -- man -- u -- el, the Christ, was born
   In Beth -- le -- hem, all on a Christ -- mas morn,
   And Chris -- tian folk through -- out the world will

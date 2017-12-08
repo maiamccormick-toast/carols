@@ -24,7 +24,6 @@ global= {
 sop = \context Voice = "sop" {
   \relative c'' {
     \voiceOne
-    \tempo "Brightly"
     \slurDotted
     c4 f,8 | f( e) f |
     g( a) bes | a4 g8 |
@@ -88,7 +87,7 @@ bass = \context Voice = "bass"   {
     a4 a8 | d( d) d |
     bes( bes) c | f4 d8\rest |
 
-    a'4 a8 | a8( g) f | f f e | c4( c8) |
+    a'4 a8 | a8( g) f | d d b | c4( c8) |
     bes( bes) bes | a4 a8 | g4 g8 | c4 c8 |
 
     d4 d8\rest | c4 d8\rest | f8( g) f | e4 c8 | f4 c8 |
