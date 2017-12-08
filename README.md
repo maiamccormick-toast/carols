@@ -10,14 +10,38 @@ This is a book of my favorite four-part Christmas carols, using Ben Kuhn's [`car
 
 ## Project structure
 
-Each carol lives in its own Lilypond file inside the `carols` subdirectory. The final book is a LaTeX file (so that it can have a nice title page, index, etc.), `book.tex`.
-
-The book can be compiled in two modes: "handout" (meant to be printed one- or two-sided and stapled in the upper-left corner), and "booklet" (two pages per side of a sheet of paper; meant to be printed double-sided and folded down the middle).
+Each carol lives in its own Lilypond file inside the `carols` subdirectory. The build script (`build.py`) builds each of this Lilypond files into a pdf in the `build` subdirectory. The final product is a pdf generated via LaTeX (by default, `carols.pdf`).
 
 ## Compiling
 
-The `build.py` script should take care of compiling any files that have changed and rebuilding the book. It needs to be run in the project root and takes one argument, `handout` or `booklet`, according to which output you want. By default, it dumps the final product in `./book.pdf`, though this (and many other settings) can be configured via the command line (run `build.py -h` for more info).
+The `build.py` script takes care of compiling any Lilypond files that have changed and (re)building the book. By default, it dumps the final product in `./carols.pdf`, though this (and many other settings) can be configured via the command line (run `build.py -h` for more info).
 
 ## Dependencies
 
-You should have Lilypond and a LaTeX distribution installed, as well as the Python dependencies (`pip install -r requirements.txt`).
+You should have [Lilypond](http://lilypond.org/download.html) installed, as well as the Python dependencies (`pip install -r requirements.txt`).
+
+### Booklet Mode
+
+If you run the build script with flag `--booklet`, in addition to the normal output, it will generate a version of your carol packet with the pages interleaved for booklet printing:
+
+![Booklet page layout](/resources/booklet-pages.png?raw=true "Booklet page layout")
+
+Print your booklet file double-sided ("flip on short edge") with two pages per sheet, and you can fold it in half, staple if (if you want, I don't care), and have a nice little booklet of carols.
+
+![How to print two pages per sheet](/resources/pages-per-sheet.png?raw=true "How to print two pages per sheet")
+
+## Lilypond Metadata
+
+In order to generate a table of contents and an index, the build script parses through each Lilypond file to grab some metadata from the `\header` block. By default, a carol is entered in the table of contents as it's `title` (with any leading articles moved to the back). If for some reason you want to override this behavior, put the desired title in the header matter as `toc_as`.
+
+By default, carols also get an index entry under their ToC title. You can add an additional index entry (e.g. a common alternate name) with the `index_as` header param. For instance, the `\header` block for the Coventry Carol might look like this:
+
+```
+\header {
+  title = "The Coventry Carol"
+  index_as = "Lully, Lullay"
+  poet = "Robert Croo, 1534"
+  composer = "16th Centry English Carol"
+  arranger = "arr. Martin Fallas Shaw (1875-1958)"
+}
+```

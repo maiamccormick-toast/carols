@@ -3,6 +3,8 @@ import os.path
 import re
 import subprocess
 
+from PyPDF2 import PdfFileWriter, PdfFileReader
+
 class LilypondException(Exception):
     pass
 
@@ -80,6 +82,48 @@ def compile_ly(src_file: str, dest_file: str, silent=False):
         # We'll print stdout too just in case, though.
         print(stdout)
         print(stderr)
+
+
+def make_booklet(input_file, output_file):
+    """
+    Given a path to a pdf (input file), interleaves the pages in the order
+    needed to make a booklet, saving the result as <output_file>.pdf (You
+    should then print this document with 2 pages per sheet.)
+    """
+
+    output_pdf = PdfFileWriter()
+
+    with open(input_file, 'rb') as readfile:
+        input_pdf = PdfFileReader(readfile)
+
+        total_pages = input_pdf.getNumPages()
+        i = 0 # increment from start
+        j = total_pages - 1 # decrement from end
+
+        if total_pages % 2 != 0:
+            # odd number of pages, insert initial blank page (for which we
+            # need page width and height)
+            page = input_pdf.getPage(0)
+            width = page.mediaBox.getWidth()
+            height = page.mediaBox.getHeight()
+            output_pdf.addBlankPage(width, height)
+            output_pdf.addPage(input_pdf.getPage(i))
+            i += 1
+
+        while True:
+            output_pdf.addPage(input_pdf.getPage(j))
+            if j == i:
+                break
+            j -= 1
+
+            output_pdf.addPage(input_pdf.getPage(i))
+            if j == i:
+                break
+            i += 1
+
+        output_file_pdf = '{}.pdf'.format(output_file)
+        with open(output_file_pdf, "wb") as outfile:
+            output_pdf.write(outfile)
 
 
 def file_modified_time(filepath):

@@ -1,15 +1,28 @@
 #! /usr/bin/env python
 
+"""
+    Command line util that, given a path to a pdf (input file), interleaves the
+    pages in the order needed to make a booklet, saving the result as
+    <output_file>.pdf. (You should then print this document with 2 pages per sheet.)
+"""
+
 import argparse
 
-from PyPDF2 import PdfFileWriter, PdfFileReader
+from utils import make_booklet
 
 def argument_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        'infile',
+        'input_file',
         type=str,
         help='path of pdf to booklet-ify'
+    )
+
+    parser.add_argument(
+        '--output_file',
+        type=str,
+        default='booklet',
+        help='name of the file to write output to (<output_file>.pdf)'
     )
 
     return parser
@@ -18,35 +31,6 @@ if __name__ == '__main__':
     parser = argument_parser()
     args = parser.parse_args()
 
-    output_pdf = PdfFileWriter()
+    make_booklet(args.input_file, args.output_file)
 
-    with open(args.infile, 'rb') as readfile:
-        input_pdf = PdfFileReader(readfile)
-
-        total_pages = input_pdf.getNumPages()
-        i = 0 # increment from start
-        j = total_pages - 1 # decrement from end
-
-        if total_pages % 2 != 0:
-            # odd number of pages, insert initial blank page (for which we need page width and height)
-            page = input_pdf.getPage(0)
-            width = page.mediaBox.getWidth()
-            height = page.mediaBox.getHeight()
-            output_pdf.addBlankPage(width, height)
-            output_pdf.addPage(input_pdf.getPage(i))
-            i += 1
-
-        while True:
-            output_pdf.addPage(input_pdf.getPage(j))
-            if j == i:
-                break
-            j -= 1
-
-            output_pdf.addPage(input_pdf.getPage(i))
-            if j == i:
-                break
-            i += 1
-
-        with open(r'output.pdf', "wb") as writefile:
-            output_pdf.write(writefile)
-            print('successfully wrote to file: output.pdf')
+    print('Successfully wrote to file: {}.pdf'.format(args.output_file))

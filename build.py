@@ -10,20 +10,6 @@ from pylatex.utils import NoEscape
 
 import utils
 
-# Compile modes
-HANDOUT = 'handout'
-BOOKLET = 'booklet'
-MODES = [HANDOUT, BOOKLET]
-MODE_INVOCATION_MAGIC_KEY = 'ITS_THE_MODE!!!'
-
-HANDOUT_DOC_CLASS = Command('documentclass',
-    arguments='memoir', options=['twoside', '10pt', 'openany', 'letterpaper'])
-HANDOUT_PKG = NoEscape('\\usepackage[noprint,1to1]{{booklet}} %{}'.
-    format(MODE_INVOCATION_MAGIC_KEY))
-BOOKLET_DOC_CLASS = Command('documentclass',
-    arguments='memoir', options=['twoside', '10pt', 'openany', 'statementpaper'])
-BOOKLET_PKG = NoEscape(r'\usepackage[print,1to1]{booklet}')
-
 # .ly "header" keys
 TITLE = 'title'
 TOC_AS = 'toc_as'
@@ -32,12 +18,11 @@ INDEX_AS = 'index_as'
 def argument_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        'mode',
-        type=str,
-        choices=MODES,
-        help='mode to compile book in:\n'
-        '- handout (for printing 1- or 2-sided, stapling in corner)\n'
-        '- booklet (for printing 2-sided, stapling down the middle)',
+        '--booklet',
+        action='store_true',
+        help='generate an additional pdf of carols with pages interleaved '
+        'for booklet printing (print double-sided with 2 sheets per page, '
+        'fold, staple down the middle)',
     )
 
     parser.add_argument(
@@ -57,7 +42,7 @@ def argument_parser():
     parser.add_argument(
         '--output_file',
         type=str,
-        default='book',
+        default='carols',
         help='name of the file to write output to (<output_file>.pdf)'
     )
 
@@ -152,7 +137,7 @@ class Document(pylatex.Document):
 
     """
 
-    def __init__(self, src_dir: str, dest_dir: str, mode: str, *args, **kwargs):
+    def __init__(self, src_dir: str, dest_dir: str, *args, **kwargs):
         """
         Args:
             src_dir (str): path to source directory (where .ly files live)
@@ -163,18 +148,14 @@ class Document(pylatex.Document):
 
         self.src_dir = src_dir
         self.dest_dir = dest_dir
-        self.mode = mode
 
-        super().__init__(*args, **kwargs)
+        super().__init__(documentclass='memoir',
+            document_options=['twoside', '10pt', 'openany', 'letterpaper'],
+            *args, **kwargs)
 
     @classmethod
-    def make_carol_book(cls, src_dir: str, dest_dir: str, mode: str='handout',
-        force_build=False, silent=False):
-        if mode not in MODES:
-            raise ValueError("'mode' must be one of {} (user provided: {})".
-                format(MODES, mode))
-
-        doc = cls(src_dir, dest_dir, mode)
+    def make_carol_book(cls, src_dir: str, dest_dir: str, force_build=False, silent=False):
+        doc = cls(src_dir, dest_dir)
 
         doc.set_up()
         doc.populate(force_build=force_build, silent=silent)
@@ -185,23 +166,16 @@ class Document(pylatex.Document):
     def set_up(self):
         """Add packages, set preliminary settings for this doc."""
         # Add packages
+        self.preamble.append(NoEscape(r'\usepackage[noprint,1to1]{booklet}'))
         self.preamble.append(Package('titlesec'))
         self.preamble.append(Package('pdfpages'))
         self.preamble.append(Package('makeidx'))
+        self.preamble.append(Package('hyperref'))
         self.preamble.append(Package('graphicx'))
 
         self.preamble.append(NoEscape(r'\graphicspath{ {resources/} }'))
 
-        if self.mode == HANDOUT:
-            # Presumably we don't care about clickable links in booklet mode, only
-            # bother with 'hyperref' (i.e. clickable index/ToC) in HANDOUT mode.
-            self.preamble.append(Package('hyperref'))
-
         self.preamble.append(NoEscape(r'\makeindex'))
-
-        # Even if user specified BOOKLET mode, build first in HANDOUT mode to
-        # get page numbers for index/ToC right.
-        self.preamble.append(HANDOUT_PKG)
 
         self.preamble.append(NoEscape(r'\source{\magstep0}{5.5in}{8.5in}'))
         self.preamble.append(NoEscape(r'\target{\magstep0}{11in}{8.5in}'))
@@ -242,6 +216,7 @@ class Document(pylatex.Document):
         # Ignore page numbers until we get to the actual body
         self.append(NoEscape(r'\pagenumbering{gobble}'))
 
+        # Silly cover image (will be in 'resources/coverImg.xxx')
         coverImg = r"""
             \begin{figure}[h]
             \vspace{3.0cm}
@@ -259,30 +234,6 @@ class Document(pylatex.Document):
         # Okay, show page numbers again
         self.append(NoEscape(r'\pagenumbering{arabic}'))
 
-    def set_booklet_mode(self, magic_key=MODE_INVOCATION_MAGIC_KEY):
-        """
-        Hack: for booklet mode, we need to build first in handout mode, and thus
-        need to swap out the package invocation for 'handout' with that for
-        'booklet'. So: find the line of the preamble where we set HANDOUT mode
-        (identified by a distinct comment string (MAGIC_KEY) at the end) and
-        replace it with the invocation for BOOKLET mode.
-        """
-        index = -1
-        for i, line in enumerate(self.preamble):
-            # import pdb; pdb.set_trace()
-            # We know the line we're looking for is of type: NoEscape
-            if isinstance(line, NoEscape):
-                if magic_key in line:
-                    index = i
-                    break
-
-        if index == -1:
-            raise Exception('Couldn\'t find current mode invocation to replace.')
-
-        # Replace current mode invocation with invocation for BOOKLET
-        self.preamble[index] = BOOKLET_PKG
-
-
     def populate(self, force_build=False, silent=False):
         ly_files = utils.ly_files_to_compile(self.src_dir)
 
@@ -294,7 +245,8 @@ class Document(pylatex.Document):
 
         # TODO: sort by toc_entry (note that we need to ignore things that
         # start w/ punct. e.g. "'twas")
-        # carols.sort(key=lambda c: c.toc_entry)
+        carols.sort(key=lambda c: c.toc_entry)
+
         for c in carols:
             c.build_if_needed(force_build=force_build, silent=silent)
 
@@ -314,23 +266,24 @@ if __name__ == '__main__':
     args = parser.parse_args()
     ly_dir, build_dir = validate_dirs(args)
 
-    carol_book = Document.make_carol_book(ly_dir, build_dir, mode=args.mode,
+    carol_book = Document.make_carol_book(ly_dir, build_dir,
         force_build=args.force_build, silent=args.silent)
 
     # NOTE: by default, pyLaTeX will compile the doc multiple times if needed to
     # make sure index/ToC are up to date.
     print('Compiling carols into LaTeX doc...')
-    carol_book.documentclass = HANDOUT_DOC_CLASS
     carol_book.generate_pdf(args.output_file, clean=False, clean_tex=False, silent=args.silent)
 
-    if carol_book.mode == BOOKLET:
-        # Now that we've built the book once in HANDOUT mode to get the
-        # index/ToC right, build for real in BOOKLET mode.
-        print('Re-compiling LaTeX doc in "booklet" mode...')
-        carol_book.documentclass = BOOKLET_DOC_CLASS
-        carol_book.set_booklet_mode()
-        carol_book.generate_pdf(args.output_file, clean=False, clean_tex=False, silent=args.silent,
-            compiler='pdflatex')
+    output_file = '{}.pdf'.format(args.output_file)
+    print('Carol book successfully written to {}'.format(output_file))
 
-    print('Carol book successfully written to {}.pdf'.format(args.output_file))
+    if args.booklet:
+        # Additionally, output a second copy of the pdf with pages interleaved
+        # for booklet printing
+        print('Now, booklet-ify-ing...')
+        booklet_outfile_base = '{}-booklet'.format(args.output_file)
+        utils.make_booklet(output_file, booklet_outfile_base)
+        print('Booklet version successfully written to {}.pdf'.format(booklet_outfile_base))
+
+
 
