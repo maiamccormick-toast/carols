@@ -19,8 +19,8 @@ global = {
 
 sopMusic = \relative c' {
   \repeat volta 3 {
-    \partial 2 e2 |
-    \time 5/4 a4 b c( b) a |
+    \partial 4 e4 |
+    a b c( b) a |
     \time 3/2 g a e2. \breathe b'4 | \break
 
     \time 5/4 c c b( a) g |
@@ -31,7 +31,7 @@ sopMusic = \relative c' {
 
     \slurSolid
     \time 3/2 a4 b c( d) e( d) |
-    \time 2/2 c8( a) b4 a2
+    \time 5/4 c8( a) b4 a2 \bar "|." \break
   }
 }
 sopWords = \lyricmode {
@@ -39,8 +39,8 @@ sopWords = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  e2 |
-  a4 a a( g) f |
+  e4 |
+  a a a( g) f |
   e d b2. e4 |
 
   e a g( f) e |
@@ -54,14 +54,14 @@ altoMusic = \relative c' {
 }
 
 altoWords = \lyricmode {
-  \set stanza = #"  1. "
+  \set stanza = #"1. "
   This is the truth sent from a -- bove,
   The truth of God, the God of love.
   There -- fore don’t turn me from your door,
   But __ heark -- en all __ both rich and poor.
 }
 altoWordsII = \lyricmode {
-  \set stanza = #"  2. "
+  \set stanza = #"2. "
   The first thing which I do re -- late
   \skip1
   Is that God did man cre -- ate;
@@ -69,21 +69,21 @@ altoWordsII = \lyricmode {
   Wo -- man was made with man to dwell.
 }
 altoWordsIII = \lyricmode {
-  \set stanza = #"  3. "
+  \set stanza = #"3. "
   Then, af -- ter this, ’twas God’s own choice
   To place them both in Pa -- ra -- dise,
   There to re -- main, from e -- vil free,
   Ex -- cept they ate __ of such a tree.
 }
 altoWordsIV = \lyricmode {
-  \set stanza = #"  4. "
+  \set stanza = #"4. "
   But they did eat, which was a sin,
   And thus their ru -- in did be -- gin.
   Ru -- ined them -- selves, both you and me,
   And all of their pos -- ter -- i -- ty.
 }
 altoWordsV = \lyricmode {
-  \set stanza = #"  5. "
+  \set stanza = #"5. "
   Thus we were heirs to end -- less woes,
   Till God the Lord did in -- ter -- pose;
   And so a prom -- ise soon did run
@@ -94,12 +94,12 @@ altoWordsV = \lyricmode {
 
 }
 altoWordsVI = \lyricmode {
-  \set stanza = #" 6. "
+  \set stanza = #"6. "
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  e2 |
-  c4 d e2 c4 |
+  e4 |
+  c d e2 c4 |
   c a a( g2) \breathe b4 |
 
   a e' e( c) c |
@@ -116,8 +116,8 @@ tenorWords = \lyricmode {
 }
 
 bassMusic = \relative c {
-  e2 |
-  a4 a a( e) f |
+  e4 |
+  a a a( e) f |
   c f e2. g4 |
 
   a4 a e( f) c4 |
@@ -162,10 +162,6 @@ bassWords = \lyricmode {
     \Lyrics
     \override LyricText #'font-size = #1.3
   }
-    \context {
-      \Staff
-      \remove Time_signature_engraver
-    }
     \context {
       \Score
       \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 2)
