@@ -46,8 +46,8 @@ altoMusic = \relative c'' {
     d4 d8 c f e |
   }
   \alternative {
-    { f4 c8 f4 c'8 }
-    { f,4 c8 f4. }
+    { f4 c8 c4 c'8 }
+    { f,4 c8 c4. }
   }
 
   e d4 d8 |

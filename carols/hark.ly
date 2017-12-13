@@ -29,11 +29,11 @@ global= {
 sop = \context Voice = "sop"    {
   \voiceOne
   c'4 f' f'4. e'8 f'4 a' a'(g')
-  c'' c'' c''4. bes'8 a'4 g' a'2
+  c'' c'' c''4. bes'8 a'4 g' a'2 \break
   c'4 f' f'4. e'8 f'4 a' a'(g')
-  c'' g' g'4. e'8 e'4 d' c'2
+  c'' g' g'4. e'8 e'4 d' c'2 \break
   c''4 c'' c'' f' bes' a' a'( g')
-  c''4 c'' c'' f' bes' a' a'( g')
+  c''4 c'' c'' f' bes' a' a'( g') \break
   d'' d'' d'' c'' bes' a' bes'2
   g'4 a'8( bes') c''4. f'8 f'4 g' a'2
 
@@ -46,7 +46,7 @@ alto=\context Voice = "alto"   {
   \voiceTwo
   c'4 c' c'4. c'8 c'4 f' f'( e')
   f' e' d' g' f' e' f'2
-  c'4 c' c'4. c'8 a4 f' f'2
+  c'4 c' c'4. bes8 a4 f' f'2
   e'4 d' e'4. c'8 c'4 b c'2
   c'4 c' c' f' g' f' f'( e')
   c'4 c' c' f' g' f' f'( e')
@@ -132,7 +132,7 @@ stanzaf = \lyricmode {
 
 }
 
-\score {
+\score { \transpose f g
   \context ChoirStaff <<
     \context ChordNames \accomp
     \unset ChoirStaff.melismaBusyProperties

@@ -37,32 +37,27 @@ sop = \context Voice = "sop"    {
     e b' b a |
     g( fis) e d |
     e fis g a |
-    b2.
-    %\bar""\break
-    e,4 |
+    b2. e,4 |
 
+    \slurSolid
     e b' b a |
     g( fis) e d |
     e fis g a |
-    b2 b4 \rest
-    %\bar""\break
-    b |
+    b2 b4 \rest b |
 
+    \slurDotted
     c a b c |
     d( e) b a |
     g e fis g |
-    a2
-    %\bar "||" \break
+    a2 \slurSolid g4( a) |
 
-    \slurSolid
-    g4( a) |
     b2 c4 b |
     b( a) g fis |
     e2 g8 fis e4 |
     a2 g4( a) |
     b( c) d e |
     b( a) g fis |
-    e2. \bar "|." % \break
+    e2. \bar "|."
   }
 }
 
@@ -72,22 +67,23 @@ alto=\context Voice = "alto"   {
     e4 |
     e g fis dis |
     \slurDotted e( d) c b |
-    \slurSolid e dis e e |
+    e dis e e |
     dis2. e4 |
 
-    e g fis dis |
-    \slurDotted e( d) c b |
     \slurSolid
+    e g fis dis |
+    e( d) c b |
     e dis e e |
     dis2 s4 e |
 
+    \slurDotted
     e d d g |
-    \slurDotted f( e) d dis |
+    f( e) d dis |
     \slurSolid
     e cis d g |
-    fis2
+    fis2 g4( d) |
 
-    g4( d) |
+    \slurSolid
     d2 e4 d |
     g( fis) e dis
     e2 b8 b cis4 |
@@ -104,23 +100,22 @@ tenor = \context Voice = "tenor"   {
     e,4 |
     g e fis b |
     \slurDotted b( b) g g |
-    \slurSolid
     g b b e, |
     fis2. e4 |
 
-    g e fis b |
-    \slurDotted b( b) g g |
     \slurSolid
+    g e fis b |
+    b( b) g g |
     g b b e, |
     fis2 s4 gis |
 
+    \slurDotted
     a a g g |
-    \slurDotted g( g) g fis |
+    g( g) g fis |
     \slurSolid
     g g a d |
-    d( c)
+    d( c) b( a) |
 
-    b( a) |
     g2 g4 g |
     d'( c) b b |
     g2 g8 g g4 |
@@ -137,23 +132,22 @@ bass = \context Voice = "bass"   {
     e,4 |
     e e dis b |
     \slurDotted e( b) c g |
-    \slurSolid
     c b e c |
     b2. e4 |
 
-    e e dis b |
-    \slurDotted e( b) c g |
     \slurSolid
+    e e dis b |
+    e( b) c g |
     c b e c |
     b2 d4\rest e |
 
+    \slurDotted
     a fis g e |
-    \slurDotted b( c) g b |
+    b( c) g b |
     \slurSolid
     e e d b |
-    d2
+    d2 e4( fis) |
 
-    e4( fis) |
     g2 c,4 g' |
     g,( a) b b |
     e2 e8 e e4 |

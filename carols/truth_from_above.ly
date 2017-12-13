@@ -21,17 +21,17 @@ sopMusic = \relative c' {
   \repeat volta 3 {
     \partial 2 e2 |
     \time 5/4 a4 b c( b) a |
-    \time 3/2 g a e2. b'4 | \break
+    \time 3/2 g a e2. \breathe b'4 | \break
 
     \time 5/4 c c b( a) g |
-    \time 3/2 a b c2. c8( d) | \break
+    \time 3/2 a b c2. \breathe c8( d) | \break
 
     e4 e d2 c4( b) |
-    \time 5/4 \slurDashed a a e2 e8( g) | \break
+    \time 5/4 \slurDashed a a e2 \breathe e8( g) | \break
 
     \slurSolid
     \time 3/2 a4 b c( d) e( d) |
-    c( a) b4 a2.
+    \time 2/2 c8( a) b4 a2
   }
 }
 sopWords = \lyricmode {
@@ -50,7 +50,7 @@ altoMusic = \relative c' {
   \slurDashed e fis b,2 e8( e) |
 
   \slurSolid e4 e a8([ g] fis4) e( fis) |
-  g( a) g8[ fis] e2.
+  g8( a) g[ fis] e2
 }
 
 altoWords = \lyricmode {
@@ -100,16 +100,16 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   e2 |
   c4 d e2 c4 |
-  c a a( g2) b4 |
+  c a a( g2) \breathe b4 |
 
   a e' e( c) c |
-  c d g,2. a4 |
+  c d g,2. \breathe a4 |
 
   b c b2 e4( d) |
-  c a g( fis!) \slurDashed g8( b) |
+  c a g( fis!) \slurDashed \breathe g8( b) |
 
   \slurSolid c4 b a4.( b8) c4( a) |
-  e'2 d4 cis2.
+  e' d cis2
 }
 tenorWords = \lyricmode {
 
@@ -127,7 +127,7 @@ bassMusic = \relative c {
   c4 d e2 \slurDashed e8( e) |
 
   a4 g \slurSolid f8([ e] d4) c( d) |
-  e( fis) g a2.
+  e8( fis) g4 a2
 }
 bassWords = \lyricmode {
 

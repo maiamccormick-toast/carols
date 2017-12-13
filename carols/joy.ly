@@ -29,19 +29,21 @@ global= {
 
 sop = \context Voice = "sop"    {
   \voiceOne
-  d''4 cis''8. b'16 a'4. g'8 fis'4 e' d'4.
-  a'8 b'4. b'8 cis''4. cis''8 d''4.
-  d''8 d''( cis'') b'( a') a'8.( g'16 fis'8)
-  d'' d''( cis'') b'( a') a'8.( g'16 fis'8)
-  fis' fis' fis' fis' fis'16( g') a'4.
-  g'16( fis') e'8 e' e' e'16( fis') g'4.
-  fis'16( e') d'8( d''4) b'8 a'8.( g'16 fis'8) g' fis'4 e' d'2 \bar "|."
+  d''4 cis''8. b'16 | a'4. g'8 | fis'4 e' | d'4. a'8 |
+  b'4. b'8 | cis''4. cis''8 | d''2~ | d''4. d''8 |
+
+  d''( cis'') b'( a') | a'8.( g'16 fis'8) d'' |
+  d''( cis'') b'( a') | a'8.( g'16 fis'8) fis' |
+  fis' fis' fis' fis'16( g') | a'4. g'16( fis') |
+  e'8 e' e' e'16( fis') g'4. fis'16( e') |
+  d'8( d''4) b'8 | a'8.( g'16 fis'8) g' |
+  fis'4 e' d'2 \bar "|."
 }
 
 alto=\context Voice = "alto"   {
   \voiceTwo
-  d'4 d'8. d'16 d'4. e'8 d'4 cis' d'4.
-  a'8 g'4. g'8 g'4. g'8 fis'4.
+  fis'4 a'8. g'16 fis'4. e'8 d'4 cis' d'4.
+  a'8 g'4. g'8 g'4. g'8 fis'2~ fis'4.
   fis'8 fis' a' g' fis' fis'8. e'16 d'8
   fis'8 fis' a' g' fis' fis'8. e'16 d'8
   d' d' d' d' d'16 e' fis'4.
@@ -51,8 +53,8 @@ alto=\context Voice = "alto"   {
 
 tenor = \context Voice = "tenor"   {
   \voiceOne
-  fis4 a8. g16 fis4. b8 a4. g8 fis4.
-  d'8 d'4. d'8 a4. a8 a4.
+  a4 d'8. d'16 d'4. b8 a4. g8 fis4.
+  d'8 d'4. d'8 a4. a8 a2~ a4.
   a8 a4 d' d'( a8) a a4 d' d'( a8) d8 \rest
   d4 \rest d8 \rest a8 a a a a a2 ~ a4.
   a8 fis( a4) d'8 d'4. b8 a4 a8( g) fis2
@@ -61,7 +63,7 @@ tenor = \context Voice = "tenor"   {
 bass = \context Voice = "bass"   {
   \voiceTwo
   d4 d8. d16 d4. g,8 a,4 a, d4.
-  fis8 g4. e8 a4. a8 d4.
+  fis8 g4. e8 a4. a8 d2~ d4.
   d8 d4 d d4. d8 d4 d d4. s8
   s4 s8 d8 d d d d a,4.
   a,8 a, a, a, a, d4. d8 d4. g,8 a,4 a, d2
