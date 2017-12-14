@@ -97,29 +97,39 @@ def make_booklet(input_file, output_file):
         input_pdf = PdfFileReader(readfile)
 
         total_pages = input_pdf.getNumPages()
+
+        # For booklets to print correctly, number of pages should be divisible
+        # by 4. If this isn't the case, add blank pages to the end until total
+        # number of pages is divisible by 4.
+        remainder = total_pages % 4
+        if remainder != 0:
+            for _ in range(4-remainder):
+                input_pdf.addBlankPage()
+
+            # reset total_pages, b/c it has changed
+            total_pages = input_pdf.getNumPages()
+
         i = 0 # increment from start
         j = total_pages - 1 # decrement from end
 
-        if total_pages % 2 != 0:
-            # odd number of pages, insert initial blank page (for which we
-            # need page width and height)
-            page = input_pdf.getPage(0)
-            width = page.mediaBox.getWidth()
-            height = page.mediaBox.getHeight()
-            output_pdf.addBlankPage(width, height)
-            output_pdf.addPage(input_pdf.getPage(i))
-            i += 1
+        # Check that length of input doc is divisible by 4, otherwise things break.
+        if total_pages % 4 != 0:
+            raise Exception('At this point in code, input pdf should have a number '
+                'of pages divisible by 4. Something is wrong')
 
-        while True:
+        # Given pages A, B, C, D, we want to reorder them: D, A, B, C
+        for _ in range(total_pages//4):
             output_pdf.addPage(input_pdf.getPage(j))
-            if j == i:
-                break
             j -= 1
 
             output_pdf.addPage(input_pdf.getPage(i))
-            if j == i:
-                break
             i += 1
+
+            output_pdf.addPage(input_pdf.getPage(i))
+            i += 1
+
+            output_pdf.addPage(input_pdf.getPage(j))
+            j -= 1
 
         output_file_pdf = '{}.pdf'.format(output_file)
         with open(output_file_pdf, "wb") as outfile:
