@@ -94,7 +94,10 @@ def make_booklet(input_file, output_file):
     output_pdf = PdfFileWriter()
 
     with open(input_file, 'rb') as readfile:
-        input_pdf = PdfFileReader(readfile)
+        orig_pdf = PdfFileReader(readfile)
+
+        input_pdf = PdfFileWriter()
+        input_pdf.cloneDocumentFromReader(orig_pdf)
 
         total_pages = input_pdf.getNumPages()
 
