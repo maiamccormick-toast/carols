@@ -78,7 +78,7 @@ altoWordsII = {
     Oh, bring us a fig -- gy pud -- ding,
     Oh, bring us a fig -- gy pud -- ding,
     and a cup of good cheer.
-    Good ti -- dings to you wher -- ev -- er you are;
+    Good ti -- dings we bring to you and your kin;
     Good ti -- dings for Christ -- mas and a hap -- py New Year!
   }
 }
