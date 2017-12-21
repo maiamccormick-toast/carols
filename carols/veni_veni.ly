@@ -176,25 +176,25 @@ stanzad = \lyricmode {
 verses = \markup{
   \fill-line {
     \column {
-      \line { \bold "5." }
-      \line { Veni, Clavis Davidica, }
-      \line { regna reclude caelica, }
-      \line { fac iter tutum superum, }
-      \line { et claude vias inferum. }
+      \line { \huge \bold "5." }
+      \line { \huge "Veni, Clavis Davidica," }
+      \line { \huge "regna reclude caelica," }
+      \line { \huge "fac iter tutum superum," }
+      \line { \huge "et claude vias inferum." }
     }
     \column {
-      \line { \bold "6." }
-      \line { Veni, veni O Oriens, }
-      \line { solare nos adveniens, }
-      \line { noctis depelle nebulas, }
-      \line { dirasque mortis tenebras. }
+      \line { \huge \bold "6." }
+      \line { \huge "Veni, veni O Oriens," }
+      \line { \huge "solare nos adveniens," }
+      \line { \huge "noctis depelle nebulas," }
+      \line { \huge "dirasque mortis tenebras." }
     }
     \column {
-      \line { \bold "7." }
-      \line { Veni, veni, Rex Gentium, }
-      \line { veni, Redemptor omnium, }
-      \line { ut salvas tuos famulos }
-      \line { peccati sibi conscios. }
+      \line { \huge \bold "7." }
+      \line { \huge "Veni, veni, Rex Gentium," }
+      \line { \huge "veni, Redemptor omnium," }
+      \line { \huge "ut salvas tuos famulos" }
+      \line { \huge "peccati sibi conscios." }
     }
   }
 }
