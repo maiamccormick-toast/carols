@@ -145,24 +145,24 @@ bassWordsc = \lyricmode {
 verses = \markup{
   \fill-line {
     \column{
-      \line { \bold "English - Verse 1:" }
-      \line{ Lo, how a Rose e’er blooming }
-      \line{ from tender stem hath sprung! }
-      \line{ Of Jesse’s lineage coming, }
-      \line{ as men of old have sung. }
-      \line{ It came, a floweret bright, }
-      \line{ Amid the cold of winter, }
-      \line{ when half spent was the night. }
+      \line { \huge \bold "English - Verse 1:" }
+      \line{ \huge "Lo, how a Rose e’er blooming" }
+      \line{ \huge "from tender stem hath sprung!" }
+      \line{ \huge "Of Jesse’s lineage coming," }
+      \line{ \huge "as men of old have sung." }
+      \line{ \huge "It came, a floweret bright," }
+      \line{ \huge "Amid the cold of winter," }
+      \line{ \huge "when half spent was the night." }
     }
     \column{
-      \line { \bold "Verse 2:" }
-      \line { Isaiah ’twas foretold it, }
-      \line { the Rose I have in mind; }
-      \line { With Mary we behold it, }
-      \line { the virgin mother kind. }
-      \line { To show God’s love aright, }
-      \line { She bore to men a Saviour, }
-      \line { when half spent was the night. }
+      \line { \huge \bold "Verse 2:" }
+      \line { \huge "Isaiah ’twas foretold it," }
+      \line { \huge "the Rose I have in mind;" }
+      \line { \huge "With Mary we behold it," }
+      \line { \huge "the virgin mother kind." }
+      \line { \huge "To show God’s love aright," }
+      \line { \huge "She bore to men a Saviour," }
+      \line { \huge "when half spent was the night." }
     }
   }
 }
