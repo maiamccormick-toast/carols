@@ -4,6 +4,7 @@ import re
 import subprocess
 
 from PyPDF2 import PdfFileWriter, PdfFileReader
+from PyPDF2.pdf import PageObject
 
 class LilypondException(Exception):
     pass
@@ -120,24 +121,58 @@ def make_booklet(input_file, output_file):
             raise Exception('At this point in code, input pdf should have a number '
                 'of pages divisible by 4. Something is wrong')
 
+
+        # Get dimensions from the first page (we'll need them for duplexing)
+        pg = input_pdf.getPage(0)
+        width, height = pg.mediaBox.getWidth(), pg.mediaBox.getHeight()
+
         # Given pages A, B, C, D, we want to reorder them: D, A, B, C
         for _ in range(total_pages//4):
-            output_pdf.addPage(input_pdf.getPage(j))
+            output_pdf.addPage(duplex_pages(input_pdf.getPage(j), input_pdf.getPage(i),
+                orig_width=width, orig_height=height))
             j -= 1
-
-            output_pdf.addPage(input_pdf.getPage(i))
             i += 1
 
-            output_pdf.addPage(input_pdf.getPage(i))
+            output_pdf.addPage(duplex_pages(input_pdf.getPage(i), input_pdf.getPage(j),
+                orig_width=width, orig_height=height))
             i += 1
-
-            output_pdf.addPage(input_pdf.getPage(j))
             j -= 1
 
         output_file_pdf = '{}.pdf'.format(output_file)
         with open(output_file_pdf, "wb") as outfile:
             output_pdf.write(outfile)
 
+
+def duplex_pages(p1, p2, orig_width=0, orig_height=0):
+    """
+    Given two PageObjects representing full-size portrait pdf pages, put them
+    both onto a single landscape pdf page.
+
+    orig_width / orig_height represent the original dimensions of the input
+    pdfs (which are assumed to be the same size). If not provided, they will
+    be pulled from the input pdfs.
+    """
+    if not orig_width:
+        orig_width = p1.mediaBox.getWidth()
+    if not orig_height:
+        orig_height = p1.mediaBox.getHeight()
+
+    # Target is landscape (reverse original width and height)
+    target = PageObject.createBlankPage(None, orig_height, orig_width)
+
+    # Scale pages
+    SCALE_FACTOR = 0.605
+    p1.scaleBy(SCALE_FACTOR)
+    p2.scaleBy(SCALE_FACTOR)
+    new_width, new_height = SCALE_FACTOR * orig_width, SCALE_FACTOR * orig_height
+
+    # Merge them into the target page
+    target.mergeTranslatedPage(p1,
+        (orig_height/2 - new_width)/2, (orig_width - new_height)/2)
+    target.mergeTranslatedPage(p2,
+        orig_height/2 + (orig_height/2 - new_width)/2, (orig_width - new_height)/2)
+
+    return target
 
 def file_modified_time(filepath):
     return os.path.getmtime(filepath)
