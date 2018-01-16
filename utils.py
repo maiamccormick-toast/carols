@@ -160,13 +160,17 @@ def duplex_pages(p1, p2, orig_width=0, orig_height=0):
     # Target is landscape (reverse original width and height)
     target = PageObject.createBlankPage(None, orig_height, orig_width)
 
-    # Scale pages to half size
-    p1.scaleTo(float(orig_height)/2, float(orig_width))
-    p2.scaleTo(float(orig_height)/2, float(orig_width))
+    # Scale pages
+    SCALE_FACTOR = 0.605
+    p1.scaleBy(SCALE_FACTOR)
+    p2.scaleBy(SCALE_FACTOR)
+    new_width, new_height = SCALE_FACTOR * orig_width, SCALE_FACTOR * orig_height
 
     # Merge them into the target page
-    target.mergeTranslatedPage(p1, 0, 0)
-    target.mergeTranslatedPage(p2, orig_height/2, 0)
+    target.mergeTranslatedPage(p1,
+        (orig_height/2 - new_width)/2, (orig_width - new_height)/2)
+    target.mergeTranslatedPage(p2,
+        orig_height/2 + (orig_height/2 - new_width)/2, (orig_width - new_height)/2)
 
     return target
 
