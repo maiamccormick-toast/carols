@@ -10,7 +10,6 @@
 *.fls
 *.fdb_latexmk
 *.tex
-todo
 __pycache__
 test.*
 .DS_Store
