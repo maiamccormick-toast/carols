@@ -22,13 +22,11 @@ You should have [Lilypond](http://lilypond.org/download.html) installed, as well
 
 ### Booklet Mode
 
-If you run the build script with flag `--booklet`, in addition to the normal output, it will generate a version of your carol packet with the pages interleaved for booklet printing:
+If you run the build script with flag `--booklet`, in addition to the normal output, it will generate a version of your carol packet with the pages duplexed and interleaved for booklet printing:
 
 ![Booklet page layout](/resources/booklet-pages.png?raw=true "Booklet page layout")
 
-Print your booklet file double-sided ("flip on short edge") with two pages per sheet, and you can fold it in half, staple if (if you want, I don't care), and have a nice little booklet of carols.
-
-![How to print two pages per sheet](/resources/pages-per-sheet.png?raw=true "How to print two pages per sheet")
+Print your booklet file double-sided ("flip on short edge") and you can fold it in half, staple if (if you want, I don't care), and have a nice little booklet of carols.
 
 ## Lilypond Metadata
 
