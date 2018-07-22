@@ -161,7 +161,7 @@ def duplex_pages(p1, p2, orig_width=0, orig_height=0):
     target = PageObject.createBlankPage(None, orig_height, orig_width)
 
     # Scale pages
-    SCALE_FACTOR = 0.605
+    SCALE_FACTOR = .66
     p1.scaleBy(SCALE_FACTOR)
     p2.scaleBy(SCALE_FACTOR)
     new_width, new_height = SCALE_FACTOR * orig_width, SCALE_FACTOR * orig_height
@@ -173,6 +173,7 @@ def duplex_pages(p1, p2, orig_width=0, orig_height=0):
         orig_height/2 + (orig_height/2 - new_width)/2, (orig_width - new_height)/2)
 
     return target
+
 
 def file_modified_time(filepath):
     return os.path.getmtime(filepath)
