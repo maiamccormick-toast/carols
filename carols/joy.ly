@@ -48,7 +48,7 @@ alto=\context Voice = "alto"   {
   fis'8 fis' a' g' fis' fis'8. e'16 d'8
   d' d' d' d' d'16 e' fis'4.
   e'16 d' cis'8 cis' cis' cis'16 d' e'4.
-  d'16 cis' d'8 fis'4 g'8 fis'8. e'16 d'8 e' d'4 cis' d'2
+  d'16 cis' d'8( fis'4) g'8 fis'8. e'16 d'8 e' d'4 cis' d'2
 }
 
 tenor = \context Voice = "tenor"   {
@@ -79,9 +79,9 @@ stanzaa = \lyricmode {
   Joy to the world! The Lord is come:
   Let earth re -- ceive her King,
   Let ev -- ery heart pre -- pare Him room,
-  And heaven and na -- ture sing,
-  And heaven and na -- ture sing,
-  And heaven, and heaven, and na -- ture sing.
+  And heav'n and na -- ture sing,
+  And heav'n and na -- ture sing,
+  And heav'n, and heav'n and na -- ture sing.
 }
 skips = {
   \skip 1 \skip 1 \skip 1
@@ -95,9 +95,9 @@ skips = {
 }
 stanzaamen = \lyricmode {
   \skips
-  And heaven and na -- ture sing,
-  And heaven and na -- ture sing,
-  And heaven and na -- ture sing.
+  And heav'n and na -- ture sing,
+  And heav'n and na -- ture sing,
+  And heav'n and na -- ture sing.
 }
 
 stanzab = \lyricmode {

@@ -48,7 +48,7 @@ alto=\context Voice = "alto"   {
 	e4 cis2 cis4 d2 d4 cis2 d4 cis2
 	e4 d2 d4 d2 d4 cis2. ~ cis2
 	cis4 cis2 cis4 cis2 cis4 cis2 cis4 cis2
-	cis4 e2 e4 dis2 dis4 e2. ~ e2
+	cis4 e2 e4 dis2 dis4 e2.( d2)
 	d4 cis2 cis4 d2 d4 cis2 d4 cis2
 	e4 d2 d4 d2 d4 cis2. ~ cis2
   }}

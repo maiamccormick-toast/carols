@@ -47,7 +47,7 @@ alto=\context Voice = "alto"   {
   ees'4 ees'8 g'8.( f'16) ees'8 d'8. ees'16 d'8 bes4.
   ees'4 ees'8 g'8.( f'16) ees'8 d'8.( ees'16) d'8 bes4.
   \slurSolid
-  ees'4 ees'8 ees'8. ees'16 c'8 d'4.( f')
+  ees'4 ees'8 c'8. ees'16 c'8 d'4.( f')
   d'4 bes8 a8. a16 a8 bes2.
 }
 

@@ -94,7 +94,7 @@ altoWordsII = \lyricmode {
   \set stanza = #"2."
   \set ignoreMelismata = ##t
   The hol -- ly bears a blos -- som,
-  As white __ _ as the lil -- ly flow’r,
+  As white as lil  -- _ ly _ flow’r,
   And _ Ma -- ry bore sweet _ Je -- sus Christ, To __ _ be our sweet Sav -- _ ior:
 }
 altoWordsIII = {
@@ -115,7 +115,7 @@ altoWordsIV = \lyricmode {
 altoWordsV = \lyricmode {
   \set stanza = #"5."
   \set ignoreMelismata = ##t
-  The hol -- ly bears a bark, __ _ As bit -- ter as __ _ an -- y gall,
+  The hol -- ly bears a bark, __ _ As bit -- ter_as an -- _ y __ _ gall,
   And _ Ma -- ry bore sweet _ Je -- sus Christ, For _ to re -- deem us __ _ all:
 }
 altoWordsVI = \lyricmode {
