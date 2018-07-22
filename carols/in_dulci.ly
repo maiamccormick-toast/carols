@@ -3,7 +3,7 @@
 \include "header.ly"
 
 \header {
-  title = "In ducli jubilo"
+  title = "In dulci jubilo"
   poet = "Heinrich Seuse (1300–1366)"
   composer = "14th Century German Melody"
   maintainer = "Maia McCormick"

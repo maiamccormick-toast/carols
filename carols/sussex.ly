@@ -71,7 +71,7 @@ altoWordsII = \lyricmode {
 %\markup\italic
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  Then why should men on earth be so sad,
+  Then why should we on earth be so sad,
   \unset ignoreMelismata
   Since our Re -- deem -- _ er made us glad? Then
   made us glad?
