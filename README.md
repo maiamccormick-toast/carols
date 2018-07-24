@@ -18,7 +18,7 @@ The `build.py` script takes care of compiling any Lilypond files that have chang
 
 ## Dependencies
 
-You should have [Lilypond](http://lilypond.org/download.html) installed, as well as the Python dependencies (`pip install -r requirements.txt`).
+You should have [Lilypond](http://lilypond.org/download.html) and [LaTeX](https://www.latex-project.org/get/) installed (and command-line invocations `lilypond` and `pdflatex`), as well as Python 3 and the Python dependencies (`pip install -r requirements.txt`).
 
 ### Booklet Mode
 
