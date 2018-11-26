@@ -41,20 +41,20 @@ sop = \context Voice = "sop" \relative c' {
 	c b8( g) a4 a | g2. d4 |
 	g g g a | b8( a) b( c) d4 b |
 	c b8( g) a4 a g2. g8( b) |
-	d4. e8 d( c) b( a) | g( a) b( c) d4 d |
+	d4. e8 d( c) b( a) | g( a b c) d4 d, |
 	g b a g | d2. d4 |
-	g g g a | b8\(( a) b( c)\) d4 b |
+	g g g a | b8( a) b( c) d4 b |
 	c b8( g) a4 a | g2. \bar "|."
 
 }
 
 alto=\context Voice = "alto" \relative c'{
     \voiceTwo
-	d4 | d e d e8( fis) | \slurDotted g4( g) fis \slurSolid e |
+	d4 | d e d e8( fis) | \slurDotted g4( g) fis e | \slurSolid
 	e g g fis | g2. d4 |
 	d e d e8( fis) | g4 g fis e |
-	e g g fis | g2. \slurDotted g4 |
-	fis4. e8 fis4 d | d( g) fis \slurSolid d4 |
+	e g g fis | g2. g4 |
+	fis4. e8 fis4 d | d( g) fis d4 |
 	d d c b8( c) | d2. d4 |
 	d e d e8( fis) | g4 g fis e |
 	e g g fis | g2.
@@ -63,11 +63,11 @@ alto=\context Voice = "alto" \relative c'{
 tenor = \context Voice = "tenor" \relative c' {
     \voiceOne
     \slurDotted
-	a4 | b c d c | d( g,) a \slurSolid g |
+	a4 | b c d c | d( g,) a g | \slurSolid
 	c d e d8( c) | b2. a4 |
 	b c d c | d g, a g |
 	c d e d8( c) | b2. b4 |
-	b4. g8 d'4 d8( c) | \slurDotted b4( g) a \slurSolid fis4 |
+	b4. g8 d'4 d8( c) | b4( g) a fis4 |
 	g g e8( fis) g4 | fis2. g8( a) |
 	b4 c d c | d g, a g |
 	c d8( b) d4 d8( c) | b2.
@@ -76,11 +76,11 @@ tenor = \context Voice = "tenor" \relative c' {
 bass = \context Voice = "bass" \relative c {
     \voiceTwo
     \slurDotted
-	fis4 | g c b a | g( e) d \slurSolid e |
+	fis4 | g c b a | g( e) d e | \slurSolid
 	a, b c d | g2. fis4 |
 	g c b a | g e d e |
 	a, b c d | g2. e4 |
-	b4. c8 d4 e8( fis) | \slurDotted g4( e) d \slurSolid d8( c) |
+	b4. c8 d4 e8( fis) | g4( e) d d8( c) |
 	b4 g c e | d2. e8( fis) |
 	g4 c b a | g e d e |
 	a, b8( e) d4 d | g2.
@@ -96,7 +96,7 @@ stanzaa = \lyricmode {
 	How still we see thee lie;
 	A -- bove thy deep and dream -- less sleep
 	The si -- lent stars go by:
-	Yet in thy dark streets shin -- _ eth
+	Yet in thy dark streets shin -- eth
 	The e -- ver -- las -- ting Light;
 	The hopes and fears of all the years
 	Are met in thee to -- night.
@@ -107,7 +107,7 @@ stanzab = \lyricmode {
 	And ga -- thered all a -- bove,
 	While mor -- tals sleep, the an -- gels keep
 	Their watch of won -- dering love.
-	O mor -- ning stars, to -- ge -- _ ther
+	O mor -- ning stars, to -- ge -- ther
 	Pro -- claim the ho -- ly birth,
 	An prai -- ses sing to God the King,
 	And peace to men on earth!
@@ -118,7 +118,7 @@ stanzac = \lyricmode {
 	The won -- drous gift is giv'n!
 	So God im -- parts to hu -- man hearts
 	The bles -- sings of His heaven:
-	No ear may hear His com -- _ ing;
+	No ear may hear His com -- ing;
 	But in this world of sin,
 	Where meek souls will re -- ceive Him, still
 	The dear Christ en -- ters in.
@@ -129,16 +129,10 @@ stanzad = \lyricmode {
 	Des -- cend to us we pray;
 	Cast out our sin, and en -- ter in;
 	Be born in us to -- day.
-	We hear the heaven -- ly an -- _ gels
+	We hear the Christ -- mas an -- gels
 	The great glad ti -- dings tell:
 	O come to us, a -- bide with us,
 	Our Lord Em -- man -- u -- el.
-}
-stanzae = \lyricmode {
-
-}
-stanzaf = \lyricmode {
-
 }
 
 \score {    \transpose g f

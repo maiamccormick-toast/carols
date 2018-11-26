@@ -123,7 +123,7 @@ stanzad = \lyricmode {
   Des -- cend to us we pray;
   Cast out our sin, and en -- ter in;
   Be born in us to -- day.
-  We hear the heaven -- ly an -- gels
+  We hear the Christ -- mas an -- gels
   The great glad ti -- dings tell:
   O come to us, a -- bide with us,
   Our Lord Em -- man -- u -- el.
@@ -158,12 +158,6 @@ stanzaf = \lyricmode {
     \lyricsto "sop" \context Lyrics = "stanza-4" {
       \set stanza = "4."
       \stanzad }
-                                %	\lyricsto "sop" \context Lyrics = "stanza-5" {
-                                %		\set stanza = "5."
-                                %			\stanzae }
-                                %	\lyricsto "sop" \context Lyrics = "stanza-6" {
-                                %		\set stanza = "6."
-                                %			\stanzaf }
     \context Staff = "lower"  { \clef "F"<<
       \global
       \tenor
