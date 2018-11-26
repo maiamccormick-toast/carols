@@ -34,56 +34,56 @@ global= {
     \partial 4
 }
 
-sop = \context Voice = "sop"    {
+sop = \context Voice = "sop" \relative c' {
     \voiceOne
     \phrasingSlurDotted
-	d'4 | g' g' g' a' | b'8\(( a') b'( c'')\) d''4 b' |
-	c'' b'8( g') a'4 a' | g'2. d'4 |
-	g' g' g' a' | b'8( a') b'( c'') d''4 b' |
-	c'' b'8( g') a'4 a' g'2. g'8( b') |
-	d''4. e''8 d''( c'') b'( a') | g'( a') b'( c'') d''4 d' |
-	g' b' a' g' | d'2. d'4 |
-	g' g' g' a' | b'8\(( a') b'( c'')\) d''4 b' |
-	c'' b'8( g') a'4 a' | g'2. \bar "|."
+	d4 | g g g a | b8\(( a) b( c)\) d4 b |
+	c b8( g) a4 a | g2. d4 |
+	g g g a | b8( a) b( c) d4 b |
+	c b8( g) a4 a g2. g8( b) |
+	d4. e8 d( c) b( a) | g( a) b( c) d4 d |
+	g b a g | d2. d4 |
+	g g g a | b8\(( a) b( c)\) d4 b |
+	c b8( g) a4 a | g2. \bar "|."
 
 }
 
-alto=\context Voice = "alto"   {
+alto=\context Voice = "alto" \relative c'{
     \voiceTwo
-	d'4 | d' e' d' e'8( fis') | \slurDotted g'4( g') fis' \slurSolid e' |
-	e' g' g' fis' | g'2. d'4 |
-	d' e' d' e'8( fis') | g'4 g' fis' e' |
-	e' g' g' fis' | g'2. \slurDotted g'4 |
-	fis'4. e'8 fis'4 d' | d'( g') fis' \slurSolid d'4 |
-	d' d' c' b8( c') | d'2. d'4 |
-	d' e' d' e'8( fis') | g'4 g' fis' e' |
-	e' g' g' fis' | g'2.
+	d4 | d e d e8( fis) | \slurDotted g4( g) fis \slurSolid e |
+	e g g fis | g2. d4 |
+	d e d e8( fis) | g4 g fis e |
+	e g g fis | g2. \slurDotted g4 |
+	fis4. e8 fis4 d | d( g) fis \slurSolid d4 |
+	d d c b8( c) | d2. d4 |
+	d e d e8( fis) | g4 g fis e |
+	e g g fis | g2.
 }
 
-tenor = \context Voice = "tenor"   {
+tenor = \context Voice = "tenor" \relative c' {
     \voiceOne
     \slurDotted
-	a4 | b c' d' c' | d'( g) a \slurSolid g |
-	c' d' e' d'8( c') | b2. a4 |
-	b c' d' c' | d' g a g |
-	c' d' e' d'8( c') | b2. b4 |
-	b4. g8 d'4 d'8( c') | \slurDotted b4( g) a \slurSolid fis4 |
+	a4 | b c d c | d( g,) a \slurSolid g |
+	c d e d8( c) | b2. a4 |
+	b c d c | d g, a g |
+	c d e d8( c) | b2. b4 |
+	b4. g8 d'4 d8( c) | \slurDotted b4( g) a \slurSolid fis4 |
 	g g e8( fis) g4 | fis2. g8( a) |
-	b4 c' d' c' | d' g a g |
-	c' d'8( b) d'4 d'8( c') | b2.
+	b4 c d c | d g, a g |
+	c d8( b) d4 d8( c) | b2.
 }
 
-bass = \context Voice = "bass"   {
+bass = \context Voice = "bass" \relative c {
     \voiceTwo
     \slurDotted
-	fis4 | g c' b a | g( e) d \slurSolid e |
-	a, b, c d | g2. fis4 |
-	g c' b a | g e d e |
-	a, b, c d | g2. e4 |
-	b,4. c8 d4 e8( fis) | \slurDotted g4( e) d \slurSolid d8( c) |
-	b,4 g, c e | d2. e8( fis) |
-	g4 c' b a | g e d e |
-	a, b,8( e) d4 d g2.
+	fis4 | g c b a | g( e) d \slurSolid e |
+	a, b c d | g2. fis4 |
+	g c b a | g e d e |
+	a, b c d | g2. e4 |
+	b4. c8 d4 e8( fis) | \slurDotted g4( e) d \slurSolid d8( c) |
+	b4 g c e | d2. e8( fis) |
+	g4 c b a | g e d e |
+	a, b8( e) d4 d | g2.
 }
 accomp=\chordmode {
 
