@@ -1,6 +1,6 @@
 \header {
   poet = "19th cen. American"
-  title = "Away in a Manger"
+  title = "Away in a Manger ('Cradle Song')"
   toc_as = "Away in a Manger (Kirkpatrick)"
   composer = "W.J. Kirkpatrick (1838-1921)"
   arranger = "arr. David Wilcocks"
