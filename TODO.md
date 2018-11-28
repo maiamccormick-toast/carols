@@ -1,4 +1,3 @@
 TODO:
-* + Other "Away In a Manger"?
 * + while shepherds watched (Handel)
-* X? O Little Town (Forest Green)
+* reverse german/english texts cuz everyone complains about the german -.-
