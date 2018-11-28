@@ -1,9 +1,10 @@
 \header {
+  filename = "away_in_a_manger_2.ly"
   poet = "19th cen. American"
   title = "Away in a Manger"
-  toc_as = "Away in a Manger (Kirkpatrick)"
-  composer = "W.J. Kirkpatrick (1838-1921)"
-  arranger = "arr. David Wilcocks"
+  toc_as = "Away in a Manger (Normandy)"
+  composer = "Trad. Normandy Melody"
+  arranger = "arr. Reginald Jacques"
   enteredby = "Maia McCormick"
   maintainer = "Maia McCormick"
   maintainerEmail = "maia.mcc@gmail.com"
@@ -16,45 +17,45 @@
 global= {
   \preamble
   \time 3/4
-  \key f \major
+  \key a \minor
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
 }
 
 sop = \context Voice = "sop" \relative c' {
   \voiceOne
-  \partial 4 c4 |
-  f f g8( a) | f4 f a8( bes) | c4 c d | bes2 g8( a) |
-  bes4 bes c | a a f8( a) | g4 d f | e2 c4 |
-  f f g8( a) | f4 f a8( bes) | c4 c d | bes2 g8( a) |
-  bes4 bes c | a a f8( a) | g4 d e | f2 \bar "|."
+  \partial 4 e4 |
+  a a a8( b) | c4 c c8( b) | a4 a g | e2 e8( g) |
+  a4 a g | e e e8( g) | a4 a g | e2 e4 |
+  a a a8( b) | c4 c c8( b) | c4 c d | e2 e8( d ) |
+  c4 c c8( b) | a4 a g | f f d | e2 \bar "|."
 }
 
 alto=\context Voice = "alto" \relative c' {
   \voiceTwo
-  \partial 4 c4 |
-  c c d8( e) | f4 c f8( g) | a4 a a | g2 d4 |
-  g8( a) g( f) g4 | f c f | d4. c8 d4 | c2 c4 |
-  c4. c8 d( e) | f( d) c4 f8( g) | a( bes) a( g) f( e) | d2 d4 |
-  g8( f) g( e) f( g) | a( g) f( e) d4 | d8( c) d4 c8( bes) | a2 \bar "|."
+  \partial 4 e4 |
+  c8( d) e4 e8( g) | g4 g g | g f8( e) d4 | e2 c8( d) |
+  e4 e d | b b e8( d) | e4 e d | c2 e4 |
+  c g' f | g g e8( d) | c4 a' a | gis2 e4 |
+  b' a g | g f e | f d a | b2
 }
 
 tenor = \context Voice = "tenor" \relative c' {
   \voiceOne
-  \partial 4 c8( bes) |
-  a4 a bes8( c) | a4 a c | f4. g8 e4 | d( c) bes8( a) |
-  g4 c g | c c d | b a b | c2 c4 |
-  c8( bes) a4 bes8( c) | a( bes) c( d) e( d) | c4 f,8( g) a4 | bes8( c d c) bes( a) |
-  g4 c g | c c a | d c8( bes) a( g) | f2 \bar "|."
+  \partial 4 b4 |
+  a8( b) c4 c8( d) | e4 e c | c a b | c2 g4 |
+  c c b | a g g | c8( b) c4 g | g2 c4 |
+  a c d | f e c | e e a, | b2 b4 |
+  e e c | c c c8( b) | a4 a a | gis2
 }
 
-bass = \context Voice = "bass" \relative c' {
+bass = \context Voice = "bass" \relative c {
   \voiceTwo
-  \partial 4 a8( g) |
-  f4 f f | f f f | f f f | f2 f4 |
-  e e e | f e d | g g g | c,2 c'8( bes) |
-  a( g) f( e) d( c) | f( g) a( bes) c( bes) | a( g) f( e) d( f) | g( a bes a) g( f) |
-  e( d) e( c) d( e) | f( g) a4 d,8( c) | bes4 g c | f,2 \bar "|."
+  \partial 4 e4 |
+  a8( b) a4 a8( g) | c4 c e, | f f g | c,2 c8( b) |
+  a4 a b | e e c8( b) | a4 a b | c2 c4 |
+  f e d | c c c' | a g f | e2 gis4 |
+  a a e | f f c | d d8( e) f4 | e2
 }
 
 stanzaa = \lyricmode {
