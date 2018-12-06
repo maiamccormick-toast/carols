@@ -30,14 +30,12 @@ Print your booklet file double-sided ("flip on short edge") and you can fold it 
 
 ## Lilypond Metadata
 
-In order to generate a table of contents and an index, the build script parses through each Lilypond file to grab some metadata from the `\header` block. By default, a carol is entered in the table of contents as it's `title` (with any leading articles moved to the back). If for some reason you want to override this behavior, put the desired title in the header matter as `toc_as`.
+In order to generate a table of contents, the build script parses through each Lilypond file to grab some metadata from the `\header` block. By default, a carol is entered in the table of contents as it's `title` (with any leading articles moved to the back). If for some reason you want to override this behavior, put the desired title in the header matter as `toc_as`.
 
-By default, carols also get an index entry under their ToC title. You can add an additional index entry (e.g. a common alternate name) with the `index_as` header param. For instance, the `\header` block for the Coventry Carol might look like this:
 
 ```
 \header {
   title = "The Coventry Carol"
-  index_as = "Lully, Lullay"
   poet = "Robert Croo, 1534"
   composer = "16th Centry English Carol"
   arranger = "arr. Martin Fallas Shaw (1875-1958)"

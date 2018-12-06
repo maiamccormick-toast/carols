@@ -13,7 +13,6 @@ import utils
 # .ly "header" keys
 TITLE = 'title'
 TOC_AS = 'toc_as'
-INDEX_AS = 'index_as'
 
 def argument_parser():
     parser = argparse.ArgumentParser()
@@ -91,15 +90,13 @@ class CarolInfo():
             # If file has a 'toc_as' header, use that as toc_entry instead
             toc_entry = headers[TOC_AS]
 
-        index_as = headers.get(INDEX_AS)
-
         filename_base = os.path.splitext(os.path.basename(ly_filepath))[0]
         pdf_base = os.path.join(pdf_dir, filename_base)
 
-        return cls(ly_filepath, pdf_base, toc_entry, index_as)
+        return cls(ly_filepath, pdf_base, toc_entry)
 
     def __init__(self, ly_filepath: str, pdf_base: str,
-                 toc_entry: str=None, index_as: str=None):
+                 toc_entry: str=None):
         self.ly_filepath = ly_filepath
         self.pdf_base = pdf_base # pdf path without file extension
         self.pdf_filepath = '{}.pdf'.format(pdf_base)
@@ -109,8 +106,6 @@ class CarolInfo():
         else:
             # If we didn't get an explicit ToC entry, just use the name of the pdf :-/
             self.toc_entry = self.pdf_filepath
-
-        self.index_as = index_as
 
     def build_if_needed(self, force_build=False, silent=False):
         # target pdf already exists
@@ -174,8 +169,6 @@ class Document(pylatex.Document):
 
         self.preamble.append(NoEscape(r'\graphicspath{ {resources/} }'))
 
-        self.preamble.append(NoEscape(r'\makeindex'))
-
         self.preamble.append(NoEscape(r'\source{\magstep0}{5.5in}{8.5in}'))
         self.preamble.append(NoEscape(r'\target{\magstep0}{11in}{8.5in}'))
         self.preamble.append(NoEscape(r'\setpdftargetpages'))
@@ -183,8 +176,6 @@ class Document(pylatex.Document):
         self.preamble.append(NoEscape(r'\setulmarginsandblock{1.65cm}{1.65cm}{*}'))
         self.preamble.append(NoEscape(r'\setlrmarginsandblock{1cm}{1cm}{*}'))
         self.preamble.append(NoEscape(r'\checkandfixthelayout'))
-
-        self.preamble.append(NoEscape(r'\makeindex'))
 
         ### Custom commands
 
@@ -198,8 +189,7 @@ class Document(pylatex.Document):
         self.append(invis_section)
 
         add_song = UnsafeCommand('newcommand', '\song', options=2,
-                                 extra_arguments=r'\index{#1}'
-                                                 r'\invisiblesection{#1}'
+                                 extra_arguments=r'\invisiblesection{#1}'
                                                  r'\includepdf[pagecommand=\thispagestyle{plain}]{#2}'
                                      )
         self.append(add_song)
@@ -249,15 +239,11 @@ class Document(pylatex.Document):
         for c in carols:
             c.build_if_needed(force_build=force_build, silent=silent)
 
-            # For now, add the song to the doc with a single ToC entry; if
-            # there's a index_as, we'll index by that as well.
-            if c.index_as:
-                self.append(NoEscape('\\index{{{}}}'.format(c.index_as)))
+            # Add the song to the doc with a single ToC entry
             self.append(NoEscape(fmtstr.format(c.toc_entry, c.pdf_filepath)))
 
     def end_matter(self):
         self.append(NoEscape(r'\clearpage'))
-        self.append(NoEscape(r'\printindex'))
 
 
 if __name__ == '__main__':
@@ -269,7 +255,7 @@ if __name__ == '__main__':
         force_build=args.force_build, silent=args.silent)
 
     # NOTE: by default, pyLaTeX will compile the doc multiple times if needed to
-    # make sure index/ToC are up to date.
+    # make sure ToC is up to date.
     print('Compiling carols into LaTeX doc...')
     carol_book.generate_pdf(args.output_file, clean=False, clean_tex=False, silent=args.silent)
 
