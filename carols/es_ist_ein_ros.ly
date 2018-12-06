@@ -6,6 +6,8 @@
   poet = "St. Germanus, 634-734"
   date=""
   title = "Es Ist Ein Ros' Entsprungen"
+  toc_as = "Es Ist Ein Ros' Entsprungen (Lo, How a Rose E'er Blooming)"
+  subtitle = "(Lo, How a Rose E'er Blooming)"
   metre = "Lo, How a Rose E'er Blooming"
   index_as = "Lo, How a Rose E'er Blooming"
   meter = \metre

@@ -5,7 +5,7 @@
   arranger = "arr. Ralph Vaughan Williams"
   poet = "Bishop Phillips Brooks, 1868"
   date=""
-  title = "O Little Town of Bethlehem"
+  title = "O Little Town of Bethlehem (Trad. English)"
   toc_as = "O Little Town of Bethlehem (Forest Green)"
   % index_as = "O Little Town of Bethlehem!Forest Green"
   metre = "Forest Green 8.6.8.6.7.6.8.6."

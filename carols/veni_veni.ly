@@ -7,6 +7,7 @@
   poet = "trans. John M. Neale and Henry Sloane Coffin"
   date=""
   title = "Veni, Veni Emmanuel"
+  subtitle = "(O Come O Come Emmanuel)"
   index_as = "O Come O Come Emmanuel"
   metre = "8.8.8.8.8.8. with Refrain"
   meter = \metre

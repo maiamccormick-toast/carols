@@ -1,8 +1,7 @@
 \header {
   filename = "away_in_a_manger_2.ly"
   poet = "19th cen. American"
-  title = "Away in a Manger"
-  toc_as = "Away in a Manger (Normandy)"
+  title  = "Away in a Manger (Normandy)"
   composer = "Trad. Normandy Melody"
   arranger = "arr. Reginald Jacques"
   enteredby = "Maia McCormick"

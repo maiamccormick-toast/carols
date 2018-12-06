@@ -4,7 +4,7 @@
   composer = "Lewis H. Redner, 1868"
   poet = "Bishop Phillips Brooks, 1868"
   date=""
-  title = "O Little Town of Bethlehem"
+  title = "O Little Town of Bethlehem (Redner)"
   toc_as = "O Little Town of Bethlehem (Lewis H. Redner)"
   % index_as = "O Little Town of Bethlehem!Redner"
   metre = "St. Louis 8.6.8.6.D."
