@@ -157,11 +157,14 @@ def duplex_pages(p1, p2, orig_width=0, orig_height=0):
     if not orig_height:
         orig_height = p1.mediaBox.getHeight()
 
+    orig_width = int(orig_width)
+    orig_height = int(orig_height)
+
     # Target is landscape (reverse original width and height)
     target = PageObject.createBlankPage(None, orig_height, orig_width)
 
     # Scale pages
-    SCALE_FACTOR = .66
+    SCALE_FACTOR = .7
     p1.scaleBy(SCALE_FACTOR)
     p2.scaleBy(SCALE_FACTOR)
     new_width, new_height = SCALE_FACTOR * orig_width, SCALE_FACTOR * orig_height
