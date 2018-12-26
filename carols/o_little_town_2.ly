@@ -110,7 +110,7 @@ stanzab = \lyricmode {
 	O mor -- ning stars, to -- ge -- ther
 	Pro -- claim the ho -- ly birth,
 	An prai -- ses sing to God the King,
-	And peace to men on earth!
+	And peace to all the earth!
 }
 
 stanzac = \lyricmode {

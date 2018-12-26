@@ -119,7 +119,7 @@ stanzac = \lyricmode {
   Ris'n with heal -- ing in His wings.
   Mild He lays His glo -- ry by,
   Born that man no more may die,
-  Born to raise the sons of earth,
+  Born to raise each child of earth,
   Born to give them sec -- ond birth.
 }
 stanzad = \lyricmode {
