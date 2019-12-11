@@ -14,3 +14,4 @@ TODO:
 * Still, Still, Still
 * Virgin Unspotted (Billings)
 * [Jesus Christ, the Apple Tree](https://www.androsemusic.com/yahoo_site_admin/assets/docs/Jesus_Christ_the_apple_tree.31520409.pdf) (Poston)
+* [It Came Upon a Midnight Clear](http://www1.cpdl.org/wiki/images/1/1a/It_came_upon_the_midnight_clear_-_Full_Score.pdf) (Sullivan)
