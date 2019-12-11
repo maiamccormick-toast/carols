@@ -190,7 +190,7 @@ class Document(pylatex.Document):
 
         add_song = UnsafeCommand('newcommand', '\song', options=2,
                                  extra_arguments=r'\invisiblesection{#1}'
-                                                 r'\includepdf[pagecommand=\thispagestyle{plain}]{#2}'
+                                                 r'\includepdf[pages={1-},pagecommand=\thispagestyle{plain}]{#2}'
                                      )
         self.append(add_song)
 

@@ -9,6 +9,7 @@
   left-margin = 6\mm
   top-margin = 6\mm
   right-margin = 6\mm
+  print-page-number = false
 }
 
 preamble = {
