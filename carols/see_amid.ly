@@ -21,7 +21,6 @@ sopMusic = \relative c'' {
   g4. a8 g4 fis | e4. d8 d2 | g4 a b c | a4. g8 g2 |
   d'4. d8 c4 b | a g fis2 | d'4. d8 c4 b | a g g(fis ) |
   g4. a8 g4 fis | e4. d8 d2 | d'4. b8 g4 c | b a g2 \bar "|."
-
 }
 sopWords = \lyricmode {
 
