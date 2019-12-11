@@ -10,3 +10,4 @@ TODO:
 * [Gods of the Heathen](http://www.hymnsandcarolsofchristmas.com/Hymns_and_Carols/gods_of_the_heathen.htm)
 * [better In Dulci translation](https://hymnary.org/text/in_dulci_jubilo_let_us_our_homage_show)
 * [additional text for What Child Is This](https://www.hymnsandcarolsofchristmas.com/Hymns_and_Carols/what_child_is_this_version_1.htm)
+* hebrew for Ma'oz Tzur?
