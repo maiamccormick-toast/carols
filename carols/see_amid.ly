@@ -5,6 +5,10 @@
   poet = "Edward Caswall, 1851"
   composer = "\"Humility\", John Goss, 1870"
   arranger = "From \"The Children's Hymnal, with Tunes\", 1875"
+  enteredby = "Maia McCormick"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2019/Dec/10"
 }
 global = {
   \preamble

@@ -5,6 +5,10 @@
   subtitle = "(Ma'oz Tzur)"
   arranger = "arr. Sarah Riskind (ed. McCormick)"
   index_as = "Ma'oz Tzur"
+  enteredby = "Maia McCormick"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com"
+  lastupdated = "2019/Dec/10"
 }
 
 \include "header.ly"
