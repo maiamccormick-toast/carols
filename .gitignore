@@ -13,3 +13,4 @@
 __pycache__
 test.*
 .DS_Store
+!todo/*.pdf
