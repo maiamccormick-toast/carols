@@ -12,6 +12,14 @@
 
 \include "header.ly"
 
+\paper {
+  system-system-spacing =
+    #'((basic-distance . 15)
+       (minimum-distance . 14)
+       (padding . 3)
+       (stretchability . 12))
+}
+
 global= {
   \preamble
   \time 3/4
@@ -23,17 +31,17 @@ global= {
 sop = \context Voice = "sop" \relative c'' {
   \voiceOne
   b4. b8 a b | fis4 fis2 | b4. d8 cis b | fis2. |
-  d'4 d d | b b2 | a8 a b4 gis | fis2. |
+  d'4 d d | \break b b2 | a8 a b4 gis | fis2. |
 
-  fis2 fis8 b | a4 a4. a8 | d4. d8 a b | a2 r4 |
-  a a b | a8( g) g2 | fis8 fis g4 b | fis2. |
+  fis2 fis8 b | a4 a4. a8 | \break d4. d8 a b | a2 r4 |
+  a a b | a8( g) g2 | fis8 fis g4 b | fis2. | \break
 
   d'4 d8 d cis d | a a a4. a8 | d4. fis8 e d | b2. |
-  e8 e d d e4 | a, a4. b8 | cis4 d8 e fis4 | e2. |
+  e8 e d d e4 | a, a4. b8 | cis4 d8 e fis4 | e2. | \break
 
   d4 d cis8 b | a2 a4 | fis'4. fis8 e d | e2.
   e4. e8 fis d | e4 e e8 fis |
-    g4.( fis8 d e | fis4. e8 cis) d |
+    g4.( fis8 d e | fis4. e8 cis) d | \break
     e4 fis d | b4.( a8 b d |
     cis4.) b8( a4) | b2. \bar "|."
 }
@@ -43,7 +51,7 @@ alto= \context Voice = "alto" \relative c' {
   fis4 fis e8 d | cis4 cis2 | d4 fis e8 d | d4( cis2) |
   fis4 fis8( e) a4 | a2 g4 | fis8 fis fis4 e8( d) | cis2. |
 
-  d2 cis8 b | cis4 cis4. fis8 | g4. fis8 e d | cis2 s4 |
+  d2 cis8 b | cis4 cis4. fis8 | g4. fis8 e d | cis2 r4 |
   fis fis8( e) fis4 | e4 d2 | d8 d d4 e | cis2. |
 
   fis4 fis8 g a fis | e e e4 fis | fis fis g8 a | a4( g2) |
@@ -94,11 +102,6 @@ bass = \context Voice = "bass" \relative c' {
 
 }
 
-accomp=\chordmode {
-
-}
-
-
 
 wordsCenter = \lyricmode {
   A -- dam lay y -- boun -- den,
@@ -127,23 +130,9 @@ wordsCenter = \lyricmode {
 }
 
 wordsTop = \lyricmode {
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
+  \repeat unfold 21 { \skip 1 }
   All for an ap -- ple, An
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-  \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
+  \repeat unfold 59 { \skip 1 }
   \lyricItal
     De -- o gra -- ci -- as,
     De -- o gra -- ci -- as!
@@ -151,12 +140,15 @@ wordsTop = \lyricmode {
 }
 
 wordsBottom = \lyricmode {
-  Lo -- rem ip -- sum do -- lor sit a -- met...
+  \repeat unfold 75 { \skip 1 }
+  \lyricItal
+    De -- o gra -- ci -- as,
+    De -- o gra -- ci -- as!
+  \lyricNormal
 }
 
 \score {
   \context ChoirStaff <<
-    \context ChordNames \accomp
     \unset ChoirStaff.melismaBusyProperties
     \context Staff ="upper"  { \clef "G" <<
       \global
@@ -182,10 +174,5 @@ wordsBottom = \lyricmode {
   >>
   \layout{
     indent = 0.0\pt
-    \context {
-      \ChordNames
-      \override ChordName  #'style = #'american
-      chordChanges = ##t
-    }
   }
 }
