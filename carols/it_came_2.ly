@@ -1,10 +1,10 @@
 \header {
   composer = "Trad. English, adapted by Arthur Sullivan"
   poet = "Edmund Hamilton Sears, 1810-1876"
-  title = "It Came Upon the Midnight Clear" (Sullivan)
+  title = "It Came Upon the Midnight Clear (Sullivan)"
   enteredby = "Maia McCormick"
   maintainer = "Maia McCormick"
-  maintainerEmail = "maia.mcc@gmail.com
+  maintainerEmail = "maia.mcc@gmail.com"
   lastupdated = "2019/Dec/12"
 }
 
@@ -24,10 +24,10 @@ sop = \context Voice = "sop"    {
   \voiceOne
   \relative c' {
     f8( g) |
-    a4 g f g8( a) | bes4 a g c | c a bes8( c) d | c2. a8( bes) | % lines break middle of that measure
-    c4 c a g | bes a g  f8( g) | a( bes) c4 a g | f2. f4 |
-    e d e g | f4. e8 d4 a' | g f e d | c2. c4 |
-    c' bes a g8( a) | bes4 a g f8( g) | a( bes) c4 a g f2.
+    a4 g f g8( a) | bes4 a g c | c a bes8( c) d4 | c2. \bar""
+    a8( bes) | c4 c a f | bes a g  f8( g) | a( bes) c4 a g | f2. \bar""
+    f4 | e d e g | f4. e8 d4 a' | g f e d | c2. \bar""
+    c4 | c' bes a g8( a) | bes4 a g f8( g) | a( bes) c4 a g f2.
    \bar "|."
   }}
 
@@ -35,34 +35,31 @@ alto=\context Voice = "alto"   {
   \voiceTwo
   \relative c' {
     f4 |
-    f e f d8( f) | e4 f e e | f4 f f f | f2. f4 |
-    e e f f | f f e f | f c f e | c2. d4 |
-    cis d d cis | d4. cis8 d4 f | e d c? b | c2. c4 |
-    a4 g fis e8( fis) | g( e) f?4 e f | f8( g) a4 f e | f2.
+    f e f d8( f) | e4 f e e | f4 f f f | f2.
+    f4 | e e f f | f f e f | f c f e | c2.
+    d4 | cis d d cis | d4. cis8 d4 f | e d c? b | c2.
+    c4 | a'4 g fis e8( fis) | g( e) f?4 e f | f8( g) a4 f e | c2.
   }}
 
 tenor = \context Voice = "tenor"   {
   \voiceOne
   \relative c' {
     a8( bes) |
-    c4 c a d8( c) | bes4 c c c | c c bes bes | a2. c4 |
-    c g f a | d c c a | f f c' bes | a2. f4 |
-    g a bes a | a4. g8 f4 b | c a g f | e2. c,4 |
-    c' c c bes8( a) | g4 c c a | c4. c8 c4 bes | a2.
+    c4 c a d8( c) | bes4 c c c | c c bes bes | a2.
+    c4 | c g f a | d c c a | f f c' bes | a2.
+    f4 | g a bes a | a4. g8 f4 b | c a g f | e2.
+    c4 | c' c c bes8( a) | g4 c c a | c4. c8 c4 bes | a2.
   }}
 
 bass = \context Voice = "bass"   {
   \voiceTwo
   \relative c {
     f4 |
-    f c f bes8( a) | g4 f c bes' | a f d bes | f2. f4 |
-    c c d d | bes f' c f | d a8( bes) c4 c | f2. d4 |
-    e f g a | d,4. d8 d4 d | e f g g, | c2. c4 |
-    a bes8( c) d4 d | g, a8( bes) c4 d | a' g8( f) c4 c | <<f2. f, >>
+    f c f bes8( a) | g4 f c bes' | a f d bes | f'2.
+    f4 | c c d d | bes f' c f | d a8( bes) c4 c | f2.
+    d4 | e f g a | d,4. d8 d4 d | e f g g, | c2.
+    c4 | a bes8( c) d4 d | g, a8( bes) c4 d | a' g8( f) c4 c | <<f2. f, >>
   }}
-accomp=\chordmode {
-
-}
 
 stanzaa = \lyricmode {
   It came up -- on the mid -- night clear,
@@ -114,9 +111,9 @@ stanzaf = \lyricmode {
 
 }
 
-\score {  \transpose a bes
+\score {
+  \transpose f g
   \context ChoirStaff <<
-    \context ChordNames \accomp
     \unset ChoirStaff.melismaBusyProperties
     \context Staff ="upper"  { \clef "G" <<
       \global
@@ -136,12 +133,6 @@ stanzaf = \lyricmode {
     \lyricsto "sop" \context Lyrics = "stanza-4" {
       \set stanza = "4."
         \stanzad }
-                                % \lyricsto "sop" \context Lyrics = "stanza-5" {
-                                %   \set stanza = "5."
-                                %     \stanzae }
-                                % \lyricsto "sop" \context Lyrics = "stanza-6" {
-                                %   \set stanza = "6."
-                                %     \stanzaf }
     \context Staff = "lower"  { \clef "F"<<
       \global
       \tenor
