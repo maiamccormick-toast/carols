@@ -2,7 +2,7 @@
 
 \header {
   title = "Jesus Christ the Apple Tree"
-  poet = "Words from \"Divine Hymns or Spiritual Songs\", compiled Joshua Smith" % italics?
+  poet = "Words from \"Divine Hymns or Spiritual Songs\"" % italics?
   composer = "Elizabeth Poston (1905-87)"
   enteredby = "Maia McCormick"
   maintainer = "Maia McCormick"
@@ -19,14 +19,23 @@ global = {
 }
 
 sopMusic = \relative c' {
+  \revert Stem.direction
   \partial 4
-  c4 | c e g g | b b c4. c8 | b4 b c c | b c g e |
-  e d g c, | c c d e | g g c c | a d, g c | % break
-  d c c g | g' e d e | g, g c c | a f g \bar"" \break
-  c, |
+  c4^\markup { \italic\bold"solo or unis." } |
   c e g g | b b c4. c8 | b4 b c c | b c g e |
   e d g c, | c c d e | g g c c | a d, g c | % break
-  d c c g | g' e d e | g, g c c | a f g
+  d c c g | g' e d e | g, g c c | a f g\fermata \bar"" \break
+
+  \override Stem.direction = #UP
+  c,^\markup { \italic\bold"SSAA" } |
+  c e g g | b b c4. c8 | b4 b c c | b c g e |
+  e d g c, | c c d e | g g c c | a d, g c | % break
+  d c c g | g' e d e | g, g c c | a f g\fermata \bar"" \pageBreak
+
+  c,^\markup { \italic\bold"SATB" } |
+  c e g g | b b c4. c8 | b4 b c c | b c g e |
+  e d g c, | c c d e | g g c c | a d, g c | % break
+  d c c g | g' e d e | g, g c c | a f g\fermata
 
 
   \bar "|."
@@ -34,10 +43,14 @@ sopMusic = \relative c' {
 }
 
 altoMusic = \relative c' {
+  \repeat unfold 48 { s4 }
   c4 | c e e e | g g g4. g8 | g4 g g g | g g e  e |
   e d c c | c c d e | e d c e | e d d e |
-  f f e f | g a a g | e d c c | e d d \bar""
-  c |
+  f f e f | g a a g | e d c c | e d d
+
+  c | c e g e | g g g4. g8 | g4 g g g | g g e e |
+  e d c c | c c c e | e d c e | e d d 
+  g | a a g g | g g a g | e d c e | e d d
 
   \bar "|."
 }
@@ -50,9 +63,7 @@ stanzaI = \lyricmode {
   }
   The trees of na -- ture fruit -- less be
   Com -- pared with Christ the ap -- ple tree.
-}
 
-stanzaII = \lyricmode {
   \set stanza = #"2."
   \repeat unfold 2 {
     His beau -- ty doth all things ex -- cel:
@@ -63,6 +74,7 @@ stanzaII = \lyricmode {
 }
 
 stanzaIII = \lyricmode {
+  \repeat unfold 48 { \skip 1 }
   \repeat unfold 48 { \skip 1 }
   \set stanza = #"3."
   \repeat unfold 2 {
@@ -75,6 +87,7 @@ stanzaIII = \lyricmode {
 
 stanzaIV = \lyricmode {
   \repeat unfold 48 { \skip 1 }
+  \repeat unfold 48 { \skip 1 }
   \set stanza = #"4."
   \repeat unfold 2 {
     I'm wear -- y with my for -- mer toil,
@@ -85,23 +98,36 @@ stanzaIV = \lyricmode {
 }
 
 tenorMusic = \relative c' {
+  \repeat unfold 48 { s4 }
   c4 | c c c c | d d e4. e8 | d4 d e e | d e c c |
   c b c c | c b c b | c b a c | c d b c |
-  c d g d | e f f e | c b a c | c c b \bar""
+  c d g d | e f f e | c b a c | c c b\fermata \bar""
   \clef bass \set Staff.explicitClefVisibility = #end-of-line-invisible
 
-  c,
+  c, | c e g c | d d e4. e8 | d4 d c e | d e c c |
+  c b a a | a b a b | c b a g | a c b 
+  e | f f e e | c c f e | c b a a | a c b\fermata
   \bar "|."
 }
 
 bassMusic = \relative c' {
+  \repeat unfold 48 { s4 }
   c4 | c c c c | c c c4. c8 | c4 c c c | c c c c |
   c b a a | a g a g | c b a a | c d b c |
   a a b c | c c c b | c b a a | c c g \bar""
   \clef bass \set Staff.explicitClefVisibility = #end-of-line-invisible
 
-  c,
+  c, | c e g c, | c c c4. c8 | g'4 g e c | g' c c c |
+  c b a a | a g f g | c b a g | d d g 
+  c | c d b b | a a c b | c b a g | d d g
   \bar "|."
+}
+
+\layout {
+  \context {
+    \Staff \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
+  }
 }
 
 \score {
@@ -113,7 +139,6 @@ bassMusic = \relative c' {
     >>
     \new Lyrics = "stanzaIV"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \stanzaIV
     \new Lyrics = "stanzaIII"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \stanzaIII
-    \new Lyrics = "stanzaII"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \stanzaII
     \new Lyrics = "stanzaI"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \stanzaI
    \new Staff = men <<
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
@@ -122,3 +147,4 @@ bassMusic = \relative c' {
   >>
   >>
 }
+
