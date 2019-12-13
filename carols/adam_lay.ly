@@ -34,15 +34,26 @@ sop = \context Voice = "sop" \relative c'' {
   d4 d cis8 b | a2 a4 | fis'4. fis8 e d | e2.
   e4. e8 fis d | e4 e e8 fis |
     g4.( fis8 d e | fis4. e8 cis) d |
-    e4 fis d | b4.( a8 b d | cis4.) b8( a4) | b2. \bar "|."
+    e4 fis d | b4.( a8 b d |
+    cis4.) b8( a4) | b2. \bar "|."
 }
 
 alto= \context Voice = "alto" \relative c' {
   \voiceTwo
   fis4 fis e8 d | cis4 cis2 | d4 fis e8 d | d4( cis2) |
   fis4 fis8( e) a4 | a2 g4 | fis8 fis fis4 e8( d) | cis2. |
+
   d2 cis8 b | cis4 cis4. fis8 | g4. fis8 e d | cis2 s4 |
   fis fis8( e) fis4 | e4 d2 | d8 d d4 e | cis2. |
+
+  fis4 fis8 g a fis | e e e4 fis | fis fis g8 a | a4( g2) |
+  g8 g fis fis e4 | d fis fis | a a8 a fis4 | a2. |
+
+  d4 d cis8 b | a2 a4 | a a a8 gis | a2. |
+  gis4 a a8 fis | a4 a g?8 a |
+    b4.( a8 fis) g | a2 a8 fis |
+    b4( a) a | a g4. g8 |
+    g2 fis4 | dis2. \bar "|."
 }
 
 tenor = \context Voice = "tenor" \relative c' {
@@ -68,8 +79,18 @@ bass = \context Voice = "bass" \relative c' {
   \voiceTwo
   b4 d, e8 e | fis4 fis2 | b4 d, e8 e | fis2. |
   d4 a' fis | g2 e4 | fis8 fis d4 e | fis2. |
+
   R | R | R | R |
   d4 a' d, | e g2 | d8 d b4 e | fis2. |
+
+  d4 d8 e fis fis | a a a4 fis | b d, e8 fis | g2. |
+  e8 e b' a g4 | fis fis d | a' fis8 fis d4 | a'2. |
+
+  d4 d cis8 b | a2 cis4 | d d cis8 b | a2. |
+  e4 a d,8 b' | a4 a c8 c |
+    g( a b4. g8 | d e fis4.) b8 |
+    g4 d8( e) fis4 | g2( fis4 |
+    e2) fis4 | << fis2. b, >> \bar "|."
 
 }
 
