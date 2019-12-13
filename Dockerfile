@@ -9,7 +9,7 @@
 # Credit: Kyle W. Baldwin (https://kylebaldw.in/posts/2019/running-lilypond-on-catalina/)
 
 # Select the base system 
-FROM ubuntu:bionic
+FROM python:3.6
 
 # Setup the locales for the Ubuntu system.  Because the base image is a bare bones 
 # setup, this is needed to get things in the correct language. 
@@ -27,3 +27,14 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install Lilypond. 
 RUN apt-get update && apt-get -y install lilypond
+
+# Install LaTeX
+RUN apt-get update -q && apt-get install -qy \
+    texlive-full \
+    python-pygments gnuplot \
+    make git \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+ADD . .
+RUN pip install -r requirements.txt
