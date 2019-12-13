@@ -1,18 +1,11 @@
 \header {
-  filename = "it_came.ly"
-  enteredby = "Gordon Gilbert and Ben Kuhn"
-  composer = "Edward Storrs Willis, 1819-1900"
+  composer = "Trad. English, adapted by Arthur Sullivan"
   poet = "Edmund Hamilton Sears, 1810-1876"
-  title = "It Came Upon the Midnight Clear (Willis)"
-  metre = "Carol 8.6.8.6.D."
-  meter = \metre
-  copyright = "Public Domain"
-  style = "Hymn"
-  mutopiacomposer = \composer
-  mutopiapoet=\poet
-  maintainer = "Gordon Gilbert"
-  maintainerEmail = "gord@angel.eicat.ca"
-  lastupdated = "2012/Dec/23"
+  title = "It Came Upon the Midnight Clear" (Sullivan)
+  enteredby = "Maia McCormick"
+  maintainer = "Maia McCormick"
+  maintainerEmail = "maia.mcc@gmail.com
+  lastupdated = "2019/Dec/12"
 }
 
 \version "2.14.2"
@@ -21,8 +14,8 @@
 
 global= {
   \preamble
-  \time 6/4
-  \key a \major
+  \time 4/4
+  \key f \major
 
   \partial 4
 }
@@ -30,53 +23,42 @@ global= {
 sop = \context Voice = "sop"    {
   \voiceOne
   \relative c' {
-	e4 cis'2 gis4 b( a) fis e2 fis4 e2
-	e4 fis( gis) a a( b) cis b2. ~ b2
-	e,4 cis'2 gis4 b( a) fis e2 fis4 e2
-	e4 fis2 fis4 gis( fis) e a2. ~ a2
-	cis4 cis2 cis,4 cis( dis) eis fis2 gis4 a2
-	cis4 b( a) gis fis( gis) fis e2. ~ e2
-	e4 cis'2 gis4 b( a) fis e2 fis4 e2
-	e4 fis2 fis4 gis( fis) e a2. ~ a2 \bar "|."
+    f8( g) |
+    a4 g f g8( a) | bes4 a g c | c a bes8( c) d | c2. a8( bes) | % lines break middle of that measure
+    c4 c a g | bes a g  f8( g) | a( bes) c4 a g | f2. f4 |
+    e d e g | f4. e8 d4 a' | g f e d | c2. c4 |
+    c' bes a g8( a) | bes4 a g f8( g) | a( bes) c4 a g f2.
+   \bar "|."
   }}
 
 alto=\context Voice = "alto"   {
   \voiceTwo
   \relative c' {
-	cis4 cis2 cis4 d2 d4 cis2 d4 cis2
-	cis4 d2 d4 dis2 dis4 e2. ~ e2
-	e4 cis2 cis4 d2 d4 cis2 d4 cis2
-	e4 d2 d4 d2 d4 cis2. ~ cis2
-	cis4 cis2 cis4 cis2 cis4 cis2 cis4 cis2
-	cis4 e2 e4 dis2 dis4 e2.( d2)
-	d4 cis2 cis4 d2 d4 cis2 d4 cis2
-	e4 d2 d4 d2 d4 cis2. ~ cis2
+    f4 |
+    f e f d8( f) | e4 f e e | f4 f f f | f2. f4 |
+    e e f f | f f e f | f c f e | c2. d4 |
+    cis d d cis | d4. cis8 d4 f | e d c? b | c2. c4 |
+    a4 g fis e8( fis) | g( e) f?4 e f | f8( g) a4 f e | f2.
   }}
 
 tenor = \context Voice = "tenor"   {
   \voiceOne
   \relative c' {
-	e,4 e2 eis4 fis2 gis4 a2 e4 e2
-	a4 a2 a4  a2 a4 gis2. ~ gis2
-	e4 e2 eis4 fis2 gis4 a2 e4 e2
-	a4 a2 b4 b( a) gis a2. ~ a2
-	cis,4 cis2 eis4 eis( fis) gis fis2 eis4 fis2
-	fis4 gis( cis) b a( b) a gis2. ~ gis2
-	gis4 a2 eis4 fis2 gis4 a2 e4 e2
-	a4 a2 b4 b( a) gis a2. ~ a2
+    a8( bes) |
+    c4 c a d8( c) | bes4 c c c | c c bes bes | a2. c4 |
+    c g f a | d c c a | f f c' bes | a2. f4 |
+    g a bes a | a4. g8 f4 b | c a g f | e2. c,4 |
+    c' c c bes8( a) | g4 c c a | c4. c8 c4 bes | a2.
   }}
 
 bass = \context Voice = "bass"   {
   \voiceTwo
-  \relative c' {
-	a,4 a2 a4 a2 a4 a2 gis4 a2
-	a4 d( e) fis fis2 b,4 e2. ~ e2
-	e4 a,2 a4 a2 a4 a2 gis4 a2
-	cis4 d2 b4 e2 e4 a,2. ~ a2
-	cis4 cis2 cis4 cis2 b4 a2 cis4 fis2
-	a,4 b2 b4 b2 b4 e2. ~ e2
-	e4 a,2 a4 a2 a4 a2 gis4 a2
-	cis4 d2 b4 e2 e4 a,2. ~ a2
+  \relative c {
+    f4 |
+    f c f bes8( a) | g4 f c bes' | a f d bes | f2. f4 |
+    c c d d | bes f' c f | d a8( bes) c4 c | f2. d4 |
+    e f g a | d,4. d8 d4 d | e f g g, | c2. c4 |
+    a bes8( c) d4 d | g, a8( bes) c4 d | a' g8( f) c4 c | <<f2. f, >>
   }}
 accomp=\chordmode {
 
@@ -132,7 +114,7 @@ stanzaf = \lyricmode {
 
 }
 
-\score {	\transpose a bes
+\score {  \transpose a bes
   \context ChoirStaff <<
     \context ChordNames \accomp
     \unset ChoirStaff.melismaBusyProperties
@@ -154,12 +136,12 @@ stanzaf = \lyricmode {
     \lyricsto "sop" \context Lyrics = "stanza-4" {
       \set stanza = "4."
         \stanzad }
-                                %	\lyricsto "sop" \context Lyrics = "stanza-5" {
-                                %		\set stanza = "5."
-                                %			\stanzae }
-                                %	\lyricsto "sop" \context Lyrics = "stanza-6" {
-                                %		\set stanza = "6."
-                                %			\stanzaf }
+                                % \lyricsto "sop" \context Lyrics = "stanza-5" {
+                                %   \set stanza = "5."
+                                %     \stanzae }
+                                % \lyricsto "sop" \context Lyrics = "stanza-6" {
+                                %   \set stanza = "6."
+                                %     \stanzaf }
     \context Staff = "lower"  { \clef "F"<<
       \global
       \tenor
