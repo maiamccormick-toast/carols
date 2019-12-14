@@ -21,8 +21,9 @@ global = {
 sopMusic = \relative c' {
   \revert Stem.direction
   \partial 4
-  c4^\markup { \italic\bold"solo or unis." } |
-  c e g g | b b c4. c8 | b4 b c c | b c g e |
+  c4^\markup {" "}^\markup {" "}^\markup {" "}^\markup {" "} % space between verse instructions and canon mark
+  ^\markup { \italic\bold"v5: unis. or canon (enter at *)" }^\markup { \italic\bold"v1: solo or unis." } |
+  c e g^\markup {"     *"} g | b b c4. c8 | b4 b c c | b c g e |
   e d g c, | c c d e | g g c c | a d, g c | % break
   d c c g | g' e d e | g, g c c | a f g\fermata \bar"" \break
 
@@ -49,7 +50,7 @@ altoMusic = \relative c' {
   f f e f | g a a g | e d c c | e d d
 
   c | c e g e | g g g4. g8 | g4 g g g | g g e e |
-  e d c c | c c c e | e d c e | e d d 
+  e d c c | c c c e | e d c e | e d d
   g | a a g g | g g a g | e d c e | e d d
 
   \bar "|."
@@ -97,6 +98,16 @@ stanzaIV = \lyricmode {
   of Je -- sus Christ the ap -- ple tree.
 }
 
+stanzaIV = \lyricmode {
+  \set stanza = #"5."
+  \repeat unfold 2 {
+    This fruit doth make my soul to thrive,
+    It keeps my dy -- ing faith alive;
+  }
+  Which makes my soul in haste to be
+  With Je -- sus Christ the ap -- ple tree.
+}
+
 tenorMusic = \relative c' {
   \repeat unfold 48 { s4 }
   c4 | c c c c | d d e4. e8 | d4 d e e | d e c c |
@@ -105,7 +116,7 @@ tenorMusic = \relative c' {
   \clef bass \set Staff.explicitClefVisibility = #end-of-line-invisible
 
   c, | c e g c | d d e4. e8 | d4 d c e | d e c c |
-  c b a a | a b a b | c b a g | a c b 
+  c b a a | a b a b | c b a g | a c b
   e | f f e e | c c f e | c b a a | a c b\fermata
   \bar "|."
 }
@@ -118,7 +129,7 @@ bassMusic = \relative c' {
   \clef bass \set Staff.explicitClefVisibility = #end-of-line-invisible
 
   c, | c e g c, | c c c4. c8 | g'4 g e c | g' c c c |
-  c b a a | a g f g | c b a g | d d g 
+  c b a a | a g f g | c b a g | d d g
   c | c d b b | a a c b | c b a g | d d g
   \bar "|."
 }
