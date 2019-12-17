@@ -54,20 +54,20 @@ sop = \context Voice = "sop" {
   \voiceOne
   \relative c' {
   e8 |
-  g4 a8 b8.( c16) b8
+  g4 a8 b8.( cis16) b8
   a4 fis8 d8.( e16) fis8
   g4 e8 e8.( dis16) e8
   fis4( dis8) b4 e8
-  g4 a8 b8.( c16) b8
+  g4 a8 b8.( cis16) b8
   a4 fis8 d8.( e16) fis8
   g8.( fis16) e8 dis8.( cis16) dis8
-  e4. e
+  e4. e \break
                                 %Refrain
   d' d8.( cis16) b8
   a4 fis8 d8.( e16) fis8
   g4 e8 e8.( dis16) e8
   fis4 dis8 b4.
-  d' d8.( cis16) b8
+  d'? d8.( cis16) b8
   a4 fis8 d8.( e16) fis8
   g8.( fis16) e8 dis8.( cis16) dis8
   e4. e \bar "|."
@@ -112,7 +112,7 @@ tenor = \context Voice = "tenor" {
   d4 a8 fis4 a8
   g4 g8 e4 e8
   b'4 b8 b4.
-  d d4 d8
+  d? d4 d8
   d4 a8 fis4 a8
   g4 a8 fis4 b8 a4. g
   }

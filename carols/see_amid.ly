@@ -83,6 +83,7 @@ bassWords = \lyricmode {
 }
 
 \score {
+  \transpose g as
   <<
    \new ChoirStaff <<
     \new Staff = women <<

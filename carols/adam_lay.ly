@@ -1,7 +1,7 @@
 \header {
   title = "Adam Lay Ybounden"
   composer = "Boris Ord"
-  poet = "anon. 15th cen."
+  poet = "Anon. 15th cen."
   enteredby = "Maia McCormick"
   maintainer = "Maia McCormick"
   maintainerEmail = "maia.mcc@gmail.com"
