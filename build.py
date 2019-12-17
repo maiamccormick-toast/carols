@@ -166,6 +166,7 @@ class Document(pylatex.Document):
         self.preamble.append(Package('makeidx'))
         self.preamble.append(Package('hyperref'))
         self.preamble.append(Package('graphicx'))
+        self.preamble.append(Package('afterpage'))
 
         self.preamble.append(NoEscape(r'\graphicspath{ {resources/} }'))
 
@@ -194,6 +195,18 @@ class Document(pylatex.Document):
                                      )
         self.append(add_song)
 
+        blank_page = UnsafeCommand('newcommand', '\\blankpage',
+                                 extra_arguments=r'\clearpage'
+                                                 r'\begingroup'
+                                                 r'\null'
+                                                 r'\thispagestyle{empty}'
+                                                 r'\addtocounter{page}{-1}'
+                                                 r'\hypersetup{pageanchor=false}'
+                                                 r'\clearpage'
+                                                 r'\endgroup'
+                                     )
+        self.append(blank_page)
+
         # Ignore chapter numbering in order for section numbering to be reasonable
         self.preamble.append(NoEscape(r'\renewcommand{\thesection}{\arabic{section}}'))
 
@@ -219,6 +232,7 @@ class Document(pylatex.Document):
         self.append(NoEscape(r'\clearpage'))
         self.append(NoEscape(r'\tableofcontents'))
         self.append(NoEscape(r'\clearpage'))
+        self.append(NoEscape(r'\blankpage'))  # need this so the 2pg carols are on facing pages
 
         # Okay, show page numbers again
         self.append(NoEscape(r'\pagenumbering{arabic}'))
