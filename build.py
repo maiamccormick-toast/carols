@@ -207,6 +207,20 @@ class Document(pylatex.Document):
                                      )
         self.append(blank_page)
 
+        # So we can change margins for a single page at a time
+        self.preamble.append(NoEscape(r'''
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+        '''))
+
         # Ignore chapter numbering in order for section numbering to be reasonable
         self.preamble.append(NoEscape(r'\renewcommand{\thesection}{\arabic{section}}'))
 
@@ -227,10 +241,12 @@ class Document(pylatex.Document):
             \end{figure}
         """
 
+        self.append(NoEscape(r'\begin{changemargin}{1.5cm}{1.5cm}'))
         self.append(NoEscape(r'\maketitle'))
         self.append(NoEscape(coverImg))
         self.append(NoEscape(r'\clearpage'))
         self.append(NoEscape(r'\tableofcontents'))
+        self.append(NoEscape(r'\end{changemargin}'))
         self.append(NoEscape(r'\clearpage'))
         self.append(NoEscape(r'\blankpage'))  # need this so the 2pg carols are on facing pages
 
