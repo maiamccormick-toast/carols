@@ -22,19 +22,21 @@ sopMusic = \relative c' {
   g8 g16( fis) g4. a8 |
   b c d4 b8\rest d |
   c b g( d4) e8 |
-  f g f4 \bar"" b8\rest d, |
+  f g f4 \bar""
 
+  b8\rest d, |
   g g16( fis) g4. a8 |
   b c d4 b8\rest b |
   c d b( g4) a8 |
-  g g g4 \bar"" b8\rest
+  g g g4 \bar""
 
-  g |
+  b8\rest g |
   g8 f' d( c4) a8 |
   bes c bes4. d16( c) |
   \times 2/3 {bes8( a) g} g( d4) e8 |
-  f g f4 \bar"" b8\rest d, |
+  f g f4 \bar""
 
+  b8\rest d, |
   g8 g16( fis) g4. a8 |
   b c d4 b8\rest b |
   c d b8( g4) a8 |
@@ -49,19 +51,21 @@ altoMusic = \relative c' {
   g d d8.( c16 b8) d |
   g g fis4 s8 d |
   e fis g( d4) e8 |
-  c c d4 s8 d |
+  c c d4
 
+  s8 d |
   g d d8.( c16 b8) d |
   g g fis4 s8 e |
   e8 d d( f4) e8 |
-  d c d4 s8 |
+  d c d4
 
-  g |
+  s8 g |
   g a g( e4) f8 |
   g8 c, d4. d8 |
   d d g( d4) e8 |
-  d e d4 s8 d |
+  d e d4
 
+  s8 d |
   g d d8.( c16 b8) d |
   g g fis4 s8 e |
   e8 d d( f4) e8 |
@@ -126,19 +130,21 @@ tenorMusic = \relative c {
   g a b8.( c16 d8) d |
   b g a4 s8 b |
   a fis b( a c) b |
-  a g a4 s8 d, |
+  a g a4
 
+  s8 d, |
   g a b8.( c16 d8) d |
   b g a4 s8 g |
   g g g4 c |
-  b8 c b4 s8 |
+  b8 c b4
 
-  g |
+  s8 g |
   g c b( a4) c8 |
-  d8 a f4. g8 |
+  d8 a f?4. g8 |
   \times 2/3 {g( a) bes} bes( a) bes( c) |
-  a c a4 r8 d, |
+  a c a4
 
+  r8 d, |
   g a b8.( c16 d8) d |
   b g a4 s8 g |
   g g g8( g4) c8 |
@@ -150,19 +156,21 @@ bassMusic = \relative c {
   g d b8.( a16 g8) fis' |
   e e d4 d8\rest b |
   c d e( fis g4) |
-  f8 e d4 d8\rest d |
+  f8 e d4
 
+  d8\rest d |
   g d b8.( a16 g8) fis' |
   e e d4 d8\rest e |
   c b b( d ) c4 |
-  g'8 e g4 d8\rest
+  g'8 e g4
 
-  g |
+  d8\rest g |
   g f g( a4) f8 |
   g f bes,4. g8 |
   g' g g( f) g( a) |
-  d, c d4 g, |
+  d, c d4
 
+  g, |
   g'8 d b8.( a16 g8) fis' |
   e e d4 d8\rest e |
   c b b( d4) c8 |
