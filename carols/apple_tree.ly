@@ -3,7 +3,7 @@
 \header {
   title = "Jesus Christ the Apple Tree"
   poet = "Words from \"Divine Hymns or Spiritual Songs\"" % italics?
-  composer = "Elizabeth Poston (1905-87)"
+  composer = "Elizabeth Poston (1905–87)"
   enteredby = "Maia McCormick"
   maintainer = "Maia McCormick"
   maintainerEmail = "maia.mcc@gmail.com"
@@ -74,7 +74,7 @@ stanzaI = \lyricmode {
   In Je -- sus Christ the ap -- ple tree.
 }
 
-stanzaIII = \lyricmode {
+stanzaII = \lyricmode {
   \repeat unfold 48 { \skip 1 }
   \repeat unfold 48 { \skip 1 }
   \set stanza = #"3."
@@ -86,7 +86,7 @@ stanzaIII = \lyricmode {
   'Tis found in Christ the ap -- ple tree.
 }
 
-stanzaIV = \lyricmode {
+stanzaIII = \lyricmode {
   \repeat unfold 48 { \skip 1 }
   \repeat unfold 48 { \skip 1 }
   \set stanza = #"4."
@@ -102,7 +102,7 @@ stanzaIV = \lyricmode {
   \set stanza = #"5."
   \repeat unfold 2 {
     This fruit doth make my soul to thrive,
-    It keeps my dy -- ing faith alive;
+    It keeps my dy -- ing faith a -- live;
   }
   Which makes my soul in haste to be
   With Je -- sus Christ the ap -- ple tree.
@@ -150,6 +150,7 @@ bassMusic = \relative c' {
     >>
     \new Lyrics = "stanzaIV"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \stanzaIV
     \new Lyrics = "stanzaIII"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \stanzaIII
+    \new Lyrics = "stanzaII"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \stanzaII
     \new Lyrics = "stanzaI"  \with { alignBelowContext = #"women" } \lyricsto "sopranos" \stanzaI
    \new Staff = men <<
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
