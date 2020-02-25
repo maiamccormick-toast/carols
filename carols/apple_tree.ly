@@ -24,18 +24,18 @@ sopMusic = \relative c' {
   c4^\markup {" "}^\markup {" "}^\markup {" "}^\markup {" "} % space between verse instructions and canon mark
   ^\markup { \italic\bold"v5: unis. or canon (enter at *)" }^\markup { \italic\bold"v1: solo or unis." } |
   c e g^\markup {"     *"} g | b b c4. c8 | b4 b c c | b c g e |
-  e d g c, | c c d e | g g c c | a d, g c | % break
+  e d g c, | c c d e | g g c c | a f g c | % break
   d c c g | g' e d e | g, g c c | a f g\fermata \bar"" \break
 
   \override Stem.direction = #UP
   c,^\markup { \italic\bold"SSAA" } |
   c e g g | b b c4. c8 | b4 b c c | b c g e |
-  e d g c, | c c d e | g g c c | a d, g c | % break
+  e d g c, | c c d e | g g c c | a f g c | % break
   d c c g | g' e d e | g, g c c | a f g\fermata \bar"" \pageBreak
 
   c,^\markup { \italic\bold"SATB" } |
   c e g g | b b c4. c8 | b4 b c c | b c g e |
-  e d g c, | c c d e | g g c c | a d, g c | % break
+  e d g c, | c c d e | g g c c | a f g c | % break
   d c c g | g' e d e | g, g c c | a f g\fermata
 
 
