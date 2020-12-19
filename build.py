@@ -262,8 +262,6 @@ class Document(pylatex.Document):
 
         fmtstr = '\\song{{{}}}{{{}}}' # ...I'm sorry.
 
-        # TODO: sort by toc_entry (note that we need to ignore things that
-        # start w/ punct. e.g. "'twas")
         carols.sort(key=lambda c: c.toc_entry)
 
         for c in carols:

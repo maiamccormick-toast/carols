@@ -250,7 +250,7 @@ textocantus=\lyricmode{
 Ri -- u, ri -- u,
 chi -- u,
 la _ guar -- da ri -- be -- ra:
-Dios guar -- dó del lo -- bo a nues -- tra cor -- de -- ra
+Dios guar -- dó del lo -- bo de nues -- tra cor -- de -- ra
 Dios guar -- dó del lo -- bo
 a _ nues -- tra cor -- de -- ra.
 }
@@ -260,7 +260,7 @@ Ri -- u, ri -- u,
 chi -- u,
 la _ guar -- da ri -- be -- ra:
 Dios guar -- dó del lo -- bo,
-lo -- bo, a nues -- tra cor -- de -- ra
+lo -- bo, de nues -- tra cor -- de -- ra
 Dios guar -- dó del lo -- bo, lo -- bo  a _ nues -- tra cor -- de -- ra.
 }
 
@@ -271,7 +271,7 @@ chi -- u,
 la _ guar -- da ri -- be -- ra:
 Dios guar -- dó del lo -- bo,
 del lo -- bo,
-a nues -- tra cor -- de -- ra
+de nues -- tra cor -- de -- ra
 Dios guar -- dó del lo -- bo,
 del -- lo -- bo a _
 nues -- tra cor -- de -- ra.
@@ -281,7 +281,7 @@ textobassus=\lyricmode{
 Ri -- u, ri -- u,
 chi -- u,
 la _ guar -- da ri -- be -- ra:
-Dios guar -- dó del lo -- bo a nues -- tra cor -- de -- ra
+Dios guar -- dó del lo -- bo de nues -- tra cor -- de -- ra
 Dios guar -- dó del lo -- bo
 a _ nues -- tra cor -- de -- ra.
 Ri -- u, ri -- u,
@@ -289,7 +289,7 @@ chi -- u,
 la _ guar -- da ri -- be -- ra:
 Dios guar -- dó del lo -- bo,
 del lo -- bo,
-a nues -- tra cor -- de -- ra
+de nues -- tra cor -- de -- ra
 Dios guar -- dó del lo -- bo, del lo -- bo
 a _ nues -- tra cor -- de -- ra.
 El lo -- bo ra -- bio -- so
@@ -312,77 +312,6 @@ con se ha -- cer chi -- \mt #1 qui-to
 aun -- que~e -- ra~in -- fi -- ni -- to,
 fi -- ni -- to se hi -- cie -- ra.
 }
-
-
-%{
-Ríu, ríu, chíu,
-la guarda ribera:
-Dios guardó del lobo
-a nuestra cordera.
-
-El lobo rabioso
-la quiso morder,
-mas Dios poderoso
-la supo defender;
-quisola hacer
-que no pudiese pecar,
-ni aun original
-esta Virgen no tuviera.
-
-Este que es nacido
-es el gran monarca,
-Cristo patriarca
-de carne vestido;
-hanos redimido
-con se hacer chiquito
-aunque era infinito,
-finito se hiciera.
-
-Muchas profecías
-lo han profetizado,
-y aun en nuestros días
-lo hemos alcanzado.
-A Dios humanado
-vemos en el suelo,
-y al hombre en el cielo
-porque El le quisiera.
-
-Yo vi mil garzones
-que andaban cantando,
-por aquí volando
-haciendo mil sones,
-diciendo a gascones:
-"Gloria sea en el cielo
-y paz en el suelo,
-pues Jesús naciera".
-
-Este viene a dar
-a los muertos vida,
-y viene a reparar
-de todos la caída;
-es la luz del día
-aqueste mozuelo;
-éste es el cordero
-que San Juan dijera.
-
-Mira bien que os cuadre
-que ansina lo oyera
-que Dios no pudiera
-hacerla más madre.
-El que era su padre
-hoy de ella nació
-y el que la crió
-su hijo se dijera.
-
-Pues que ya tenemos
-lo que deseamos,
-todos juntos vamos,
-presentes llevamos;
-todos le daremos
-nuestra voluntad,
-pues a se igualar
-con el hombre viniera.
-%}
 
 \score {\transpose c' c'{
 \new ChoirStaff<<
