@@ -9,6 +9,7 @@ esac
 
 docker image inspect $IMAGE_NAME > /dev/null 2>&1
 RESULT=$?
+set -e
 if [[ $RESULT -ne 0 || $FORCE_BUILD ]]; then
   echo "Image $IMAGE_NAME not found / build requested, building..."
   docker build . -t $IMAGE_NAME
