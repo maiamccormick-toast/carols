@@ -2,7 +2,6 @@ TODO:
 * while shepherds watched (Handel)
 * cherry tree carol
 * carols from Becca/Tracy ?
-* adam lay ybounden
 * see amid the winter's snow ([possible score](http://christmascarolmusic.org/SATB/WintersSnow.html))
 * Gaudete (Kay)
 * Shiloh, Milford (Daniel recommends)
