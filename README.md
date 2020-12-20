@@ -1,3 +1,5 @@
+# A Carefully Curated and Compiled Collection of Christmas Carols
+
 Here's the problem with existing books of Christmas carols:
 
 - They don't have all the carols I like.
@@ -7,6 +9,11 @@ Here's the problem with existing books of Christmas carols:
 - It's expensive to buy enough copies to have a good caroling party.
 
 This is a book of my favorite four-part Christmas carols, using Ben Kuhn's [`carols` project](https://github.com/benkuhn/carols) as a jumping-off point. If you see stuff you like, or gaps that demand to be filled, feel free to fork this repo, make PRs, etc.!
+
+### Just want the PDFs?
+This repo also contains the latest generated versions of the carol book:
+* [Full-Size](/carols.pdf) (with links in the pdf, good for singing off a tablet)
+* [Booklet](/carols-booklet.pdf) (for printing and folding into a booklet)
 
 ## Project structure
 
