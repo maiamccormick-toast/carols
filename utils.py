@@ -62,11 +62,11 @@ def headers_block_to_dict(headers_block: str):
 
     return headers
 
-def compile_ly(src_file: str, dest_file: str, silent=False):
+def compile_ly(basename: str, silent=False):
     # note: dest_file should NOT have an extension (.pdf is added automatically in compilation)
-    print('Compiling {} --> {}.pdf'.format(src_file, dest_file))
+    print('Compiling carols/{basename}.ly --> build/{basename}.pdf'.format(basename=basename))
 
-    res = subprocess.run(['lilypond', '-drelative-includes', '-o', dest_file, src_file],
+    res = subprocess.run(['./compile_with_docker.sh', basename],
         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     stdout = res.stdout.decode("utf-8")
@@ -79,8 +79,6 @@ def compile_ly(src_file: str, dest_file: str, silent=False):
 
     # Yay, success!
     if not silent:
-        # Lilypond seems to only output to stderr, even for success...
-        # We'll print stdout too just in case, though.
         print(stdout)
         print(stderr)
 

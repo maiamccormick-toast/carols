@@ -14,6 +14,22 @@ import utils
 TITLE = 'title'
 TOC_AS = 'toc_as'
 
+# We rely on a specific directory structure to work with the Dockerfile/Lilypond
+# compilation script, etc.:
+# .
+# ├── build.py
+# ├── build
+# │   ├── carol_1.pdf
+# │   ├── ...
+# │   └── carol_n.pdf
+# └── carols
+#     ├── carol_1.ly
+#     ├── ...
+#     └── carol_n.ly
+LY_DIR = './carols'
+BUILD_DIR = './build'
+
+
 def argument_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -21,20 +37,6 @@ def argument_parser():
         action='store_true',
         help='generate an additional pdf of carols with pages interleaved and duplexed '
              'for booklet printing (print double-sided, fold, staple down the middle)',
-    )
-
-    parser.add_argument(
-        '--ly_dir',
-        type=str,
-        default='./carols',
-        help='directory containing .ly files of carols',
-    )
-
-    parser.add_argument(
-        '--build_dir',
-        type=str,
-        default='./build',
-        help='directory to build carol pdfs into'
     )
 
     parser.add_argument(
@@ -59,23 +61,6 @@ def argument_parser():
     return parser
 
 
-def validate_dirs(user_args):
-    ly_dir = user_args.ly_dir
-    build_dir = user_args.build_dir
-
-    if not os.path.isdir(ly_dir):
-        print('Could not find specified "ly_dir": "{}". Creating...'.
-            format(ly_dir))
-        os.mkdir(ly_dir)
-
-    if not os.path.isdir(build_dir):
-        print('Could not find specified "build_dir": "{}". Creating...'.
-            format(build_dir))
-        os.mkdir(build_dir)
-
-    return ly_dir, build_dir
-
-
 class CarolInfo():
 
     """Store info related to a single carol."""
@@ -93,10 +78,11 @@ class CarolInfo():
         filename_base = os.path.splitext(os.path.basename(ly_filepath))[0]
         pdf_base = os.path.join(pdf_dir, filename_base)
 
-        return cls(ly_filepath, pdf_base, toc_entry)
+        return cls(filename_base, ly_filepath, pdf_base, toc_entry)
 
-    def __init__(self, ly_filepath: str, pdf_base: str,
-                 toc_entry: str=None):
+    def __init__(self, filename_base: str, ly_filepath: str,
+                 pdf_base: str, toc_entry: str=None):
+        self.filename_base = filename_base
         self.ly_filepath = ly_filepath
         self.pdf_base = pdf_base # pdf path without file extension
         self.pdf_filepath = '{}.pdf'.format(pdf_base)
@@ -119,7 +105,7 @@ class CarolInfo():
 
         # If we make it down here, either we're in force_build mode or pdf isn't
         # current: compile the ly file into the target pdf
-        utils.compile_ly(self.ly_filepath, self.pdf_base, silent=silent)
+        utils.compile_ly(self.filename_base, silent=silent)
 
 
 class Document(pylatex.Document):
@@ -277,9 +263,8 @@ class Document(pylatex.Document):
 if __name__ == '__main__':
     parser = argument_parser()
     args = parser.parse_args()
-    ly_dir, build_dir = validate_dirs(args)
 
-    carol_book = Document.make_carol_book(ly_dir, build_dir,
+    carol_book = Document.make_carol_book(LY_DIR, BUILD_DIR,
         force_build=args.force_build, silent=args.silent)
 
     # NOTE: by default, pyLaTeX will compile the doc multiple times if needed to
