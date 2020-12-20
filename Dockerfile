@@ -27,13 +27,5 @@ ENV DEBIAN_FRONTEND noninteractive
 # Install Lilypond.
 RUN apt-get update && apt-get -y install lilypond
 
-# Install LaTeX
-# RUN apt-get update -q && apt-get install -qy \
-#     texlive-full \
-#     python-pygments gnuplot \
-#     make git \
-#     && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /app
 ADD ./carols .
-# RUN pip install -r requirements.txt
