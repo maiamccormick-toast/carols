@@ -20,12 +20,17 @@ This repo also contains the latest generated versions of the carol book:
 Each carol lives in its own Lilypond file inside the `carols` subdirectory. The build script (`build.py`) builds each of this Lilypond files into a pdf in the `build` subdirectory. The final product is a pdf generated via LaTeX (by default, `carols.pdf`).
 
 ## Compiling
-
 The `build.py` script takes care of compiling any Lilypond files that have changed and (re)building the book. By default, it dumps the final product in `./carols.pdf`, though this (and many other settings) can be configured via the command line (run `build.py -h` for more info).
+
+### Compiling a single carol
+Carols are compiled into pdfs via [Lilypond](http://lilypond.org/download.html). However, last I heard, Lilypond didn't work on the latest MacOS 😢 so now this project runs Lilypond in a container (with thanks to [Kyle W. Baldwin](https://kylebaldw.in/posts/2019/running-lilypond-on-catalina/)). To compile a single carol, use the `compile_with_docker.sh` script. E.g. to compile `carols/my_carol.ly` to `build/my_carol.pdf`, run:
+```
+./compile_with_docker.sh my_carol
+```
 
 ## Dependencies
 
-You should have [Lilypond](http://lilypond.org/download.html) and [LaTeX](https://www.latex-project.org/get/) installed (and command-line invocations `lilypond` and `pdflatex`), as well as Python 3 and the Python dependencies (`pip install -r requirements.txt`).
+You should have [Docker](https://www.docker.com/) and [LaTeX](https://www.latex-project.org/get/) installed, as well as Python 3 and the Python dependencies (`pip install -r requirements.txt`).
 
 ### Booklet Mode
 
@@ -42,7 +47,8 @@ In order to generate a table of contents, the build script parses through each L
 
 ```
 \header {
-  title = "The Coventry Carol"
+  title = "Lully Lullay (The Coventry Carol)"
+  toc_as = "The Coventry Carol"
   poet = "Robert Croo, 1534"
   composer = "16th Centry English Carol"
   arranger = "arr. Martin Fallas Shaw (1875-1958)"
