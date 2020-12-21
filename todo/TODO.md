@@ -17,6 +17,8 @@
 * Shiloh, Milford (Daniel recommends)
 * while shepherds watched (Handel)
 * Still, Still, Still
+* [Lullay My Liking (Holst)](https://www.cpdl.org/wiki/images/f/fd/Ws-hols-lu2.pdf)
+* [Legend/Crown of Roses (Tchaikovsky)](https://www.cpdl.org/wiki/images/3/33/Tcha-leg.pdf)
 
 ## Tweaks
 * [In Dulci: better translation](https://hymnary.org/text/in_dulci_jubilo_let_us_our_homage_show)
