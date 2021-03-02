@@ -26,6 +26,3 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install Lilypond.
 RUN apt-get update && apt-get -y install lilypond
-
-WORKDIR /app
-ADD ./carols .
