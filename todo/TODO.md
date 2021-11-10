@@ -9,7 +9,7 @@
 
 ### Considering
 * cherry tree carol (need arrangement)
-* Gaudete (Kay) (too many parts?)
+* [Gaudete (Kay)](https://proarte-sion.ch/wp-content/uploads/2019/09/Gaudete.pdf) (too many parts?)
 * [Gods of the Heathen](http://www.hymnsandcarolsofchristmas.com/Hymns_and_Carols/gods_of_the_heathen.htm)
 * In Dulci - Handel
 * Shiloh, Milford (Daniel recommends)
